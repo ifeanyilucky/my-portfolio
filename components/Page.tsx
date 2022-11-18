@@ -1,0 +1,20 @@
+import Head from 'next/head';
+
+interface HeadProps {
+  title: string;
+  metaName: string;
+  metaContent: string;
+}
+export default function Page({
+  title,
+  metaName,
+  metaContent,
+}: HeadProps): JSX.Element {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name={metaName} content={metaContent} />
+      <link rel='icon' href='/favicon.ico' />
+    </Head>
+  );
+}
