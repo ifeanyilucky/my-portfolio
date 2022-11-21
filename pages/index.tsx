@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Home from '../components/Home';
 import Page from '../components/Page';
+import HomeProjects from '../components/HomeProject';
 
 const Index: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Index: NextPage = () => {
       />
 
       <Home />
+      <HomeProjects />
     </div>
   );
 };

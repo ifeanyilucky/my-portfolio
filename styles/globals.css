@@ -142,7 +142,7 @@ p {
   opacity: 1 !important;
 }
 .container {
-  padding: 0 2rem;
+  padding: 2rem 2rem;
 }
 main {
   display: flex;
@@ -204,6 +204,11 @@ main {
   }
   .right-footer-row {
     justify-content: space-between !important;
+  }
+  .about-box {
+    max-width: 768px;
+    margin-top: 5rem;
+    margin-left: 0 !important;
   }
 }
 @media (max-width: 960px) {
@@ -294,4 +299,21 @@ footer {
 }
 .book-content .author {
   color: var(--color-graphite);
+}
+
+.bucket-list {
+  list-style-type: circle;
+  padding-left: 2.3rem;
+}
+
+.project-wrapper {
+  max-width: 769px;
+}
+.project-cover {
+  width: 100%;
+  height: 100%;
+}
+.project-cover img {
+  height: 100%;
+  width: 100%;
 }
