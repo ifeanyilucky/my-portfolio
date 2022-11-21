@@ -7,9 +7,9 @@ export default function Home(): JSX.Element {
       <div className='hero'>
         <div className='intro'>
           <h1>
-            Frontend Developer of intuitive and aesthetic digital products. I
-            enjoy building interfaces that are a joy to use and support
-            inclusive visions.
+            Hi there, I'm glad you found me. My name is Ifeanyi Lucky and I
+            build software, explain it to people in “human”, and make sure it
+            does what they really need.
             <br />
             <Link href='/about'>
               <a className='link'> Read more</a>

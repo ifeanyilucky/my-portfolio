@@ -38,7 +38,7 @@ export default function Footer(): JSX.Element {
                     <Link href='/resume'>Resume</Link>
                   </p>
                   <p className='link'>
-                    <Link href='/blog'>Blog</Link>
+                    <Link href='/uses'>Uses</Link>
                   </p>
                 </div>
               </div>
