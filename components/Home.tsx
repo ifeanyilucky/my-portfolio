@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { projects } from './projects';
+import { projects } from '../context/projects';
 
 export default function Home(): JSX.Element {
   return (

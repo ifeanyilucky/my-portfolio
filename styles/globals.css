@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&display=swap');
-
+@import url('./bootstrap.css');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +11,9 @@
   letter-spacing: 0.2px;
   line-height: 140%;
   color: var(--color-black);
+}
+body {
+  background-color: var(--color-black) !important;
 }
 @media screen and (prefers-color-scheme: dark) {
   * {
@@ -25,6 +28,7 @@
   --type-base: 1.125rem;
   --type-medium: 1.5rem;
   --type-large: 2rem;
+  --border-color: rgba(151, 164, 175, 0.5);
 }
 @media screen and (max-width: 768px) {
   :root {
@@ -59,6 +63,7 @@ html.is-animating .transition-fade {
 a {
   color: inherit;
   text-decoration: none;
+  color: var(--color-graphite);
 }
 
 * {
@@ -95,7 +100,7 @@ p {
     rgba(0, 0, 0, 0)
   );
   position: sticky;
-  z-index: 1;
+  z-index: 999;
   top: 0;
 }
 
@@ -257,6 +262,12 @@ footer {
   line-height: 1.4;
   padding: 0.5rem 0;
 }
+.text-secondary {
+  color: var(--color-white);
+  font-size: var(--type-medium);
+  line-height: 1.4;
+  padding: 0.5rem 0;
+}
 .text-primary .link {
   opacity: 1 !important;
   text-decoration: underline;
@@ -309,11 +320,131 @@ footer {
 .project-wrapper {
   max-width: 769px;
 }
-.project-cover {
-  width: 100%;
-  height: 100%;
+
+/* devices style for projects */
+
+.devices {
+  max-width: 1140px;
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem 0.75rem 7rem;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
 }
-.project-cover img {
-  height: 100%;
+.devices .device-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 991.98px) {
+  .devices .device-mobile {
+    display: none;
+  }
+}
+.devices .device-browser {
+  margin-left: auto;
+  margin-right: 5rem;
+}
+@media (max-width: 991.98px) {
+  .devices .device-mobile {
+    margin-right: 0.5rem;
+  }
+  .devices .device-browser {
+    margin-right: auto;
+  }
+}
+.devices-shadow-none .device-browser,
+.devices-shadow-none .device-mobile-frame {
+  box-shadow: none;
+}
+.device-mobile {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  width: 15rem;
+  height: auto;
+}
+.device-mobile-frame {
+  background: #f8fafd;
+  box-shadow: 0 2.75rem 5.5rem -3.5rem rgba(189, 197, 209, 0.2),
+    0 2rem 4rem -2rem rgba(0, 34, 28, 0.3),
+    inset 0 -0.1875rem 0.3125rem 0 rgba(151, 164, 175, 0.5);
+  border-radius: 2rem;
+  padding: 0.3125rem;
+}
+.device-mobile-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.6rem;
+}
+.device-browser {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  /* width: 50rem; */
+  height: auto;
+  box-shadow: 0 2.75rem 5.5rem -1rem rgba(189, 197, 209, 0.2),
+    0 2rem 4rem -1rem rgba(0, 34, 28, 0.15);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.device-browser-frame {
+  background: #fff;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.device-browser-img {
+  max-width: 100%;
+  height: auto;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.device-browser-header {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 50rem;
+  background: #fff;
+  border-bottom: 0.0625rem solid #f1f3f8;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 0.5rem 6.5rem;
+}
+.device-browser-header-btn-list {
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 0.25rem;
+  position: absolute;
+  top: calc(50% - 0.25rem);
+  left: 1rem;
+}
+.device-browser-header-btn-list-btn {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #e7eaf3;
+  border-radius: 50%;
+}
+.device-browser-header-browser-bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
+  background-color: #e7eaf3;
+  font-size: 0.5rem;
+  border-radius: 0.125rem;
+}
+.device-browser-lg {
+  width: 60rem;
+}
+.device-browser-lg .device-browser-header {
+  max-width: 60rem;
 }

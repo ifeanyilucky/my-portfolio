@@ -4,7 +4,7 @@ import Page from '../components/Page';
 const development = [
   'I use Visual Studio Code as my code editor, with the Atom One Dark theme and JetBrains Mono as my typeface of choice.',
   'Brave is main browser for both development and general use.',
-  'React is my front end Javascript library of choice. The component-centric mental model is the first that that first made sense to me as a frontend developer.',
+  'React is my front end Javascript library of choice. The component-centric mental model is the first that first made sense to me as a frontend developer.',
   'For CSS i have used a myriad pre-processors and css-in-js solutions like styled-components, but these days i am using vanilla CSS with Sass. ',
   'For Javascript animations i use GSAP, its a great way scroll animations to react.',
   'Talmabout backend, Node JS is my fave Javascript framework, but im currently learning Django',

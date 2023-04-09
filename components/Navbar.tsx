@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { projects } from './projects';
+import { projects } from '../context/projects';
 
 export default function Navbar(): JSX.Element {
   return (
-    <div className='navbar container'>
+    <div className='navbar container  fixed-top'>
       <ul className='nav-list'>
         <li className='nav-item'>
           <Link href='/'>

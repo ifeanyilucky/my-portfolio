@@ -22,10 +22,14 @@ const About: NextPage = () => {
               <Link href='/uses'>
                 <a className='link'>uses</a>
               </Link>{' '}
-              page In my spare time i like to read Books, play video games and
-              attempt codewars challenge My whole life is shaped around my
-              passion for programming. I'm always down for hearing about new
-              projects, so feel free to drop me a line.
+              page. In my spare time i like to read Books, watch movies and
+              attempt codewars challenge.
+            </p>
+            <p className='text-primary'>
+              {' '}
+              My whole life is shaped around my passion for programming. I'm
+              always down for hearing about new projects, so feel free to drop
+              me a line.
             </p>
           </div>
           <div className='about-section'>
@@ -60,8 +64,13 @@ const About: NextPage = () => {
             </p>
             <ul className='bucket-list'>
               {bucketList.map((list) => (
-                <li className='text-primary bucket-list-item' key={list.title}>
-                  {list.title} {list.done ? '(checked)' : ''}
+                <li
+                  className={`${
+                    list.done ? 'text-secondary' : 'text-primary'
+                  } bucket-list-item`}
+                  key={list.title}
+                >
+                  {list.title} {list.done ? '✅' : ''}
                 </li>
               ))}
             </ul>

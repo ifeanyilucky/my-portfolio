@@ -4,6 +4,10 @@ export const bucketList: Array<{ title: string; done: boolean }> = [
     done: false,
   },
   {
+    title: 'Start mentoring',
+    done: true,
+  },
+  {
     title: 'Travel to Germany',
     done: false,
   },
@@ -19,8 +23,9 @@ export const bucketList: Array<{ title: string; done: boolean }> = [
     title: 'Get a full-time remote job',
     done: false,
   },
+
   {
-    title: 'Start mentoring',
+    title: 'Build a proptech startup',
     done: true,
   },
 ];
