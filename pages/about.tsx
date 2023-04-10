@@ -14,7 +14,7 @@ const About: NextPage = () => {
       />
       <PageWrapper>
         <div className='container'>
-          <div class='row'>
+          <div className='row'>
             <div className='col-md-8 col-12 mx-auto'>
               <div className='about-section'>
                 <h1 style={{ paddingBottom: '1.5rem' }}>About</h1>
