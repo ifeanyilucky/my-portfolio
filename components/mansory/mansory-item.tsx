@@ -1,96 +1,96 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'next/router';
-/* -------------------------- Internal Dependencies ------------------------- */
-import Image from '../Image';
 import SideBarModal from '../SidebarModal';
+import { WithRouterProps } from 'next/dist/client/with-router';
+import { ProjectDetailProps } from '../../types';
 
-interface MansoryItemProp {
-  item: object;
-  router: object;
+interface MansoryItemProp extends WithRouterProps {
+  item: ProjectDetailProps;
+  key: number;
 }
-const MansoryItem = withRouter(({ item, router: { pathname } }) => {
-  const [show, setShow] = useState(false);
-  const height = ['400px', '454px', '310px'];
-  const random = Math.floor(Math.random() * height.length);
-  return (
-    <>
-      {!pathname.includes('/work') ? (
-        <a
-          href={item.link}
-          target='_blank'
-          style={{
-            color: 'inherit',
-            textDecoration: 'none',
-            display: 'block',
-          }}
-          rel='noopener noreferrer'
-          title={item.title}
-          id='cardHover'
-          aria-label={`${item.title} ${item.description}`}
-        >
-          <MansoryItemStyle
-            {...{ item }}
+const MansoryItem = withRouter(
+  ({ item, key, router: { pathname } }: MansoryItemProp) => {
+    const [show, setShow] = useState(false);
+    const height = ['400px', '454px', '310px'];
+    const random = Math.floor(Math.random() * height.length);
+    return (
+      <>
+        {!pathname.includes('/work') ? (
+          <a
+            href={item.link}
+            target='_blank'
             style={{
-              height: height[random],
+              color: 'var(--color-graphite)',
+              textDecoration: 'none',
+              display: 'block',
             }}
-            role='gridcell'
-          >
-            <Image src={item.imageUrl} alt={item.imageUrl} />
-            <div className='content__slate'>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          </MansoryItemStyle>
-        </a>
-      ) : (
-        <>
-          <MansoryItemStyle
-            {...{ item }}
-            style={{
-              height: height[random],
-            }}
-            role='gridcell'
+            rel='noopener noreferrer'
+            title={item.title}
             id='cardHover'
             aria-label={`${item.title} ${item.description}`}
-            onClick={() => setShow(true)}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') return setShow(true);
-            }}
-            tabIndex={0}
           >
-            <Image src={item.cover} alt={item.imageUrl} />
-            <div className='content__slate'>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              {item.technologies && (
-                <p className='d-flex flex-wrap'>
-                  {item.technologies.map((tech: string, index: number) => (
-                    <span key={index} className='d-block mb-1'>
-                      {tech}
-                    </span>
-                  ))}
-                </p>
-              )}
-            </div>
-          </MansoryItemStyle>
+            <MansoryItemStyle
+              {...{ item }}
+              style={{
+                height: height[random],
+              }}
+              role='gridcell'
+            >
+              <img src={item.cover} alt={item.cover} />
+              <div className='content__slate'>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </MansoryItemStyle>
+          </a>
+        ) : (
+          <>
+            <MansoryItemStyle
+              {...{ item }}
+              style={{
+                height: height[random],
+              }}
+              role='gridcell'
+              id='cardHover'
+              aria-label={`${item.title} ${item.description}`}
+              onClick={() => setShow(true)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') return setShow(true);
+              }}
+              tabIndex={0}
+            >
+              <img src={item.cover} alt={item.cover} />
+              <div className='content__slate'>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                {item.technologies && (
+                  <p className='d-flex flex-wrap'>
+                    {item.technologies.map((tech: string, index: number) => (
+                      <span key={index} className='d-block mb-1'>
+                        {tech}
+                      </span>
+                    ))}
+                  </p>
+                )}
+              </div>
+            </MansoryItemStyle>
 
-          <SideBarModal
-            show={show}
-            closeShow={() => setShow(false)}
-            size='lg'
-            data={item}
-            overlayColor={''}
-            css={undefined}
-          />
-        </>
-      )}
-    </>
-  );
-});
+            <SideBarModal
+              show={show}
+              closeShow={() => setShow(false)}
+              size='lg'
+              data={item}
+              overlayColor={''}
+              css={undefined}
+            />
+          </>
+        )}
+      </>
+    );
+  }
+);
 
 const MansoryItemStyle = styled.div`
   margin: 0 0 1.5em;
@@ -137,7 +137,7 @@ const MansoryItemStyle = styled.div`
     content: '';
     pointer-events: none;
     position: absolute;
-    /* z-index: 1; */
+    z-index: 1;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -161,7 +161,7 @@ const MansoryItemStyle = styled.div`
       opacity: 1;
     }
     div.content__slate {
-      /* z-index: 999; */
+      z-index: 999;
       transform: none;
       opacity: 1;
     }

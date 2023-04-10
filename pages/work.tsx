@@ -1,19 +1,12 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
-
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-/* -------------------------- Internal Dependencies ------------------------- */
-
-// import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
-// import Tabs, { TabItems } from '../components/Tabs';
 import MansoryLayout from '../components/mansory';
 import MansoryItem from '../components/mansory/mansory-item';
 import { ProjectsContext } from '../context';
 import Page from '../components/Page';
+import { ProjectDetailProps } from '../types';
 
 const Projects = () => {
   const projectsData = useContext(ProjectsContext);
@@ -29,7 +22,7 @@ const Projects = () => {
           <div>
             <h1>Projects.</h1> <br />
             <MansoryLayout>
-              {projectsData.map((item, index) => (
+              {projectsData.map((item: ProjectDetailProps, index: number) => (
                 <MansoryItem key={index} item={item} />
               ))}
             </MansoryLayout>

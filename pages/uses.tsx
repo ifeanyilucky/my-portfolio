@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Page from '../components/Page';
+import { PageWrapper } from '../components/PageWrapper';
 
 const development = [
   'I use Visual Studio Code as my code editor, with the Atom One Dark theme and JetBrains Mono as my typeface of choice.',
@@ -21,35 +22,39 @@ const Uses: NextPage = () => {
         title='About me'
       />
       <div className='container'>
-        <div className='about-box'>
-          <div className='about-section'>
-            <h1>Uses</h1>
-            <p className='text-primary'>
-              A somewhat comprehensive list of tools, apps, and more that i use
-              on a daily basis to code things and sometimes design.
-            </p>
+        <PageWrapper>
+          <div className='row'>
+            <div className='col-md-8 col-12 mx-auto'>
+              <div className='about-section'>
+                <h1>Uses</h1>
+                <p className='text-primary'>
+                  A somewhat comprehensive list of tools, apps, and more that i
+                  use on a daily basis to code things and sometimes design.
+                </p>
+              </div>
+              <div className='about-section'>
+                <h2>Development</h2>
+                <ul>
+                  {development.map((dev, index) => (
+                    <li className='text-primary' key={index}>
+                      {dev}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className='about-section'>
+                <h2>Design</h2>
+                <ul>
+                  {design.map((des, index) => (
+                    <li className='text-primary' key={index}>
+                      {des}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className='about-section'>
-            <h2>Development</h2>
-            <ul>
-              {development.map((dev, index) => (
-                <li className='text-primary' key={index}>
-                  {dev}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className='about-section'>
-            <h2>Design</h2>
-            <ul>
-              {design.map((des, index) => (
-                <li className='text-primary' key={index}>
-                  {des}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        </PageWrapper>
       </div>
     </div>
   );

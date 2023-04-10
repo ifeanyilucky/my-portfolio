@@ -127,15 +127,6 @@ p {
   opacity: 0.6;
 }
 
-.hero {
-  margin-top: 10em;
-}
-.hero .intro {
-  max-width: 41em;
-}
-.hero .intro h1 {
-  line-height: 1.5;
-}
 .text-fade {
   opacity: 0.4;
 }

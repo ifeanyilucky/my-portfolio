@@ -6,23 +6,7 @@ import React, { useCallback, useEffect } from 'react';
 import styled, { css, createGlobalStyle } from 'styled-components';
 
 import { Close, Github, Product } from './Icons';
-
-interface ISideBarModal {
-  show: boolean;
-  closeShow: () => void;
-  size: string;
-  overlayColor: string;
-  data: {
-    title: string;
-    about: string;
-    link: string;
-    cover: string;
-    technologies: string[];
-    description: string;
-    github: string;
-  };
-  css: Object | any;
-}
+import { ISideBarModal } from '../types';
 
 const SideBarModal = ({
   show,

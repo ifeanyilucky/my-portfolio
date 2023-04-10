@@ -1,15 +1,15 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
-import React from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /* ------------------------- MansoryLayout PropTypes ------------------------ */
 interface MansoryLayoutProps {
-  children: JSX.Element;
+  children: ReactNode;
 }
-const MansoryLayout = ({ children }: MansoryLayoutProps) => {
+const MansoryLayout: FunctionComponent<MansoryLayoutProps> = ({ children }) => {
   return <Layout>{children}</Layout>;
 };
 
