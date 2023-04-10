@@ -14,7 +14,8 @@ interface MansoryItemProp {
 }
 const MansoryItem = withRouter(({ item, router: { pathname } }) => {
   const [show, setShow] = useState(false);
-
+  const height = ['400px', '454px', '310px'];
+  const random = Math.floor(Math.random() * height.length);
   return (
     <>
       {!pathname.includes('/work') ? (
@@ -34,7 +35,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
           <MansoryItemStyle
             {...{ item }}
             style={{
-              height: '400px',
+              height: height[random],
             }}
             role='gridcell'
           >
@@ -50,7 +51,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
           <MansoryItemStyle
             {...{ item }}
             style={{
-              height: '400px',
+              height: height[random],
             }}
             role='gridcell'
             id='cardHover'
@@ -59,7 +60,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
             onKeyPress={(e) => {
               if (e.key === 'Enter') return setShow(true);
             }}
-            tabIndex='0'
+            tabIndex={0}
           >
             <Image src={item.cover} alt={item.imageUrl} />
             <div className='content__slate'>
@@ -67,7 +68,7 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
               <p>{item.description}</p>
               {item.technologies && (
                 <p className='d-flex flex-wrap'>
-                  {item.technologies.map((tech, index) => (
+                  {item.technologies.map((tech: string, index: number) => (
                     <span key={index} className='d-block mb-1'>
                       {tech}
                     </span>
@@ -82,6 +83,8 @@ const MansoryItem = withRouter(({ item, router: { pathname } }) => {
             closeShow={() => setShow(false)}
             size='lg'
             data={item}
+            overlayColor={''}
+            css={undefined}
           />
         </>
       )}
@@ -134,7 +137,7 @@ const MansoryItemStyle = styled.div`
     content: '';
     pointer-events: none;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -158,7 +161,7 @@ const MansoryItemStyle = styled.div`
       opacity: 1;
     }
     div.content__slate {
-      z-index: 999;
+      /* z-index: 999; */
       transform: none;
       opacity: 1;
     }

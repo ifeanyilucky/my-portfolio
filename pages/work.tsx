@@ -21,13 +21,13 @@ const Projects = () => {
     <div>
       <Page
         metaContent='I enjoy building interfaces that are a joy to use and support inclusive visions.'
-        metaName='About me'
-        title='About me'
+        metaName='My works'
+        title='My works'
       />
       <div className='container'>
         <PageSection>
           <div>
-            <h1 className='intro__text'>Projects.</h1> <br />
+            <h1>Projects.</h1> <br />
             <MansoryLayout>
               {projectsData.map((item, index) => (
                 <MansoryItem key={index} item={item} />

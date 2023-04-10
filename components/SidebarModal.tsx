@@ -21,7 +21,7 @@ interface ISideBarModal {
     description: string;
     github: string;
   };
-  css: Object;
+  css: Object | any;
 }
 
 const SideBarModal = ({
@@ -32,11 +32,14 @@ const SideBarModal = ({
   css: styling,
   data,
 }: ISideBarModal) => {
-  const handleKeyPress = useCallback((e: Event) => {
-    if (e.key === 'Escape') {
-      closeShow();
-    }
-  }, []);
+  const handleKeyPress = useCallback(
+    (e: any) => {
+      if (e.key === 'Escape') {
+        closeShow();
+      }
+    },
+    [closeShow]
+  );
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyPress);
@@ -44,13 +47,13 @@ const SideBarModal = ({
     return () => {
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, []);
+  }, [handleKeyPress]);
   return (
     <>
       {show && (
         <>
           <Body />
-          <Wrapper size={size} css={styling} data-testid='sidebarmodal'>
+          <Wrapper size={size} data-testid='sidebarmodal'>
             <Overlay
               overlayColor={overlayColor}
               className='overlay'
@@ -273,7 +276,7 @@ const Wrapper = styled.div`
       color: var(--article-color);
       font-size: var(--font-sm);
       span {
-        background: var(--sidebar-tag);
+        background: #232323;
         padding: 6px 13px;
         border-radius: 4px;
         text-transform: capitalize;
@@ -299,7 +302,7 @@ const Wrapper = styled.div`
 `;
 
 const Overlay = styled.div`
-  z-index: 99999999;
+  z-index: 9999;
   position: fixed;
   height: 100%;
   width: 100%;

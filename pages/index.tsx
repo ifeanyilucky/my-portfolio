@@ -16,7 +16,7 @@ const Index: NextPage = () => {
       />
 
       <Home />
-      <HomeProjects />
+      {/* <HomeProjects /> */}
     </div>
   );
 };

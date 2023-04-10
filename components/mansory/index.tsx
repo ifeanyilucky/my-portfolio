@@ -6,8 +6,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /* ------------------------- MansoryLayout PropTypes ------------------------ */
-
-const MansoryLayout = ({ children }) => {
+interface MansoryLayoutProps {
+  children: JSX.Element;
+}
+const MansoryLayout = ({ children }: MansoryLayoutProps) => {
   return <Layout>{children}</Layout>;
 };
 

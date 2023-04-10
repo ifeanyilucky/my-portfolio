@@ -66,8 +66,8 @@ a {
   color: var(--color-graphite);
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  color: #fff;
 }
 h1,
 h2,
@@ -100,7 +100,7 @@ p {
     rgba(0, 0, 0, 0)
   );
   position: sticky;
-  z-index: 999;
+
   top: 0;
 }
 
@@ -257,7 +257,7 @@ footer {
 }
 
 .text-primary {
-  color: var(--color-graphite);
+  color: var(--color-graphite) !important;
   font-size: var(--type-medium);
   line-height: 1.4;
   padding: 0.5rem 0;

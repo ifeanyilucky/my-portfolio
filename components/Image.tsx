@@ -1,24 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import ProgressiveImage from 'react-progressive-image';
+import ProgressiveImage from './ProgressiveImage';
 
-/* --------------------------- Image defaultProps --------------------------- */
-const defaultProps = {
-  alt: 'ifeanyi',
-  className: '',
-};
 interface ImageProps {
-  src: string;
+  src?: string;
   alt: string;
-  className: string;
+  className?: string;
 }
 
-const Image = ({ src, alt, className }: ImageProps) => (
+const Image: Element = ({ src, alt, className }: ImageProps) => (
   <ProgressiveImage
     src={src}
-    placeholder='https://i.ibb.co/BTvLMXq/Ripple-1-9s-201px.gif'
+    placeholderSrc='https://i.stack.imgur.com/ATB3o.gif'
   >
     {(currentSrc: string, loading: boolean) => (
       <>
