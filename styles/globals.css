@@ -154,13 +154,7 @@ main {
     list-style: none;
     grid-template-columns: repeat(4, 1fr);
   }
-  .nav-item:nth-child(1) {
-    grid-column: 1/3;
-  }
-  .nav-item:nth-child(2),
-  .nav-item:nth-child(3) {
-    display: none;
-  }
+
   .container {
     max-width: 550px;
     padding: 1rem 1rem;
@@ -189,9 +183,7 @@ main {
   .container {
     max-width: 750px;
   }
-  .nav-item:nth-child(2) .nav-link {
-    display: none;
-  }
+
   .row {
     flex-flow: column !important;
   }

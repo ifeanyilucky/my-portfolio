@@ -18,24 +18,44 @@ const About: NextPage = () => {
             <div className='col-md-8 col-12 mx-auto'>
               <div className='about-section'>
                 <h1 style={{ paddingBottom: '1.5rem' }}>About</h1>
-
                 <p className='text-primary'>
-                  I'm Ifeanyi, currently i live in Lagos. If you're interested
-                  in the tools and software i use check out my{' '}
+                  As a frontend developer based in Lagos, I am passionate about
+                  creating visually appealing and user-friendly websites that
+                  engage and inspire users. With my in-depth knowledge of
+                  front-end technologies such as HTML, CSS, JavaScript, and
+                  React, I am able to bring designs to life and ensure seamless
+                  functionality across all devices.{' '}
+                </p>
+                <p className='text-primary'>
+                  I pride myself on my ability to work collaboratively with
+                  designers and back-end developers to ensure that every aspect
+                  of a website is optimized for performance, usability, and
+                  accessibility. From responsive layouts to interactive
+                  animations, I am committed to delivering high-quality code
+                  that meets the needs of both clients and end-users.
+                </p>{' '}
+                <p className='text-primary'>
+                  {' '}
+                  Whether I am working on a small project for a local business
+                  or a large-scale application for a global brand, I approach
+                  each task with the same level of enthusiasm and attention to
+                  detail. As a frontend developer in Lagos, I am constantly
+                  learning and adapting to new technologies and trends in order
+                  to stay ahead of the curve and deliver the best possible
+                  results for my clients.
+                </p>
+                <p className='text-primary'>
+                  If you're interested in the tools and software i use check out
+                  my{' '}
                   <Link href='/uses'>
                     <a className='link'>uses</a>
                   </Link>{' '}
-                  page. In my spare time i like to read Books, watch movies and
-                  attempt codewars challenge.
-                </p>
-                <p className='text-primary'>
-                  {' '}
-                  My whole life is shaped around my passion for programming. I'm
-                  always down for hearing about new projects, so feel free to
-                  drop me a line.
+                  page.
+                  {/* In my spare time i like to read Books, watch movies and
+                  attempt codewars challenge. */}
                 </p>
               </div>
-              <div className='about-section'>
+              {/* <div className='about-section'>
                 <h1 style={{ paddingBottom: '1.5rem' }}>Experience</h1>
                 <p className='text-primary'>
                   So as not to bore you, I'll leave my school career out of
@@ -58,7 +78,7 @@ const About: NextPage = () => {
                   </Link>
                   .
                 </p>
-              </div>
+              </div> */}
               <div className='about-section'>
                 <h1 style={{ paddingBottom: '1.5rem' }}>Bucket List</h1>
                 <p className='text-primary'>

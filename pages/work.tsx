@@ -20,7 +20,7 @@ const Projects = () => {
       <div className='container'>
         <PageSection>
           <div>
-            <h1>Projects.</h1> <br />
+            <h1>Selected projects.</h1> <br />
             <MansoryLayout>
               {projectsData.map((item: ProjectDetailProps, index: number) => (
                 <MansoryItem key={index} item={item} />

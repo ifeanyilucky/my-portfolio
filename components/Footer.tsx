@@ -13,9 +13,9 @@ export default function Footer(): JSX.Element {
             </div>
             <div className='footer-text'>
               <h2>
-                Let's envision a better future together by building solutions
-                that positively impact the way we live and leave a better earth
-                for future generations.
+                I'm currently looking for a job but still available for
+                freelance work in the meantime. Feel free to contact me if you
+                want to collaborate on future projects or have a little chat.
                 <br />
                 <a href='mailto:ifeanyilucky360@gmail.com' className='link'>
                   Get in touch.
@@ -46,13 +46,31 @@ export default function Footer(): JSX.Element {
                 <h3>Connect</h3>
                 <div className='footer-list'>
                   <p className='link'>
-                    <a href='https://twitter.com/ifeanyilucas'>Twitter</a>
+                    <a
+                      href='https://twitter.com/ifeanyilucas'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      Twitter
+                    </a>
                   </p>
                   <p className='link'>
-                    <a href='https://linkedin.com/ifeanyilucky'>LinkedIn</a>
+                    <a
+                      href='https://www.linkedin.com/in/ifeanyi-lucky-193b44194/'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      LinkedIn
+                    </a>
                   </p>
                   <p className='link'>
-                    <a href='https://github.com/ifeanyilucky'>Github</a>
+                    <a
+                      href='https://github.com/ifeanyilucky'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      Github
+                    </a>
                   </p>
                   <p className='link'>
                     <a href='mailto:ifeanyilucky360@gmail.com'>Email</a>

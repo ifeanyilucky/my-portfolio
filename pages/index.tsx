@@ -20,9 +20,9 @@ const Index: NextPage = () => {
         <div className='mt-5'>
           <PageWrapper>
             <h1 className='display-4'>
-              Hi there, I'm glad you found me. My name is Ifeanyi Lucky and I
-              build software, explain it to people in “human”, and make sure it
-              does what they really need.
+              Hi there, I'm glad you found me. My name is Ifeanyi Lucky and I'm
+              passionate about web development and design, currently working
+              with NextJs, VueJs, Typescript, GSAP, NodeJs and more.
               <br />
               <Link href='/about'>
                 <a className='link'> Read more</a>
