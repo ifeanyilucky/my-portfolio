@@ -132,6 +132,7 @@ p {
 }
 .link {
   opacity: 0.4;
+  color: #fff !important;
   transition: opacity 0.4s ease-in-out;
 }
 .link:hover {

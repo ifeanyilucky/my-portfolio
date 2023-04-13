@@ -12,7 +12,7 @@ export default function Page({
 }: HeadProps): JSX.Element {
   return (
     <Head>
-      <title>{title}</title>
+      <title>{title} | Ifeanyi Lucky</title>
       <meta name={metaName} content={metaContent} />
       <link rel='icon' href='/favicon.ico' />
     </Head>

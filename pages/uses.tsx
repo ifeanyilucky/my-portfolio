@@ -4,11 +4,11 @@ import { PageWrapper } from '../components/PageWrapper';
 
 const development = [
   'I use Visual Studio Code as my code editor, with the Atom One Dark theme and JetBrains Mono as my typeface of choice.',
-  'Brave is main browser for both development and general use.',
-  'React is my front end Javascript library of choice. The component-centric mental model is the first that first made sense to me as a frontend developer.',
-  'For CSS i have used a myriad pre-processors and css-in-js solutions like styled-components, but these days i am using vanilla CSS with Sass. ',
-  'For Javascript animations i use GSAP, its a great way scroll animations to react.',
-  'Talmabout backend, Node JS is my fave Javascript framework, but im currently learning Django',
+  'Brave is my main browser for both development and general use.',
+  'React is my front end Javascript library of choice.',
+  'For CSS I enjoy using pre-processors and css-in-js solutions like styled-components. ',
+  'For Javascript animations I use GSAP.',
+  'NodeJS is currently my favorite javascript framework for backend, but I am currently learning Ruby.',
 ];
 const design = [
   'Figma is my primary tool for design these days. I use it mostly for illustration and custom icon design.',
@@ -19,7 +19,7 @@ const Uses: NextPage = () => {
       <Page
         metaContent='I enjoy building interfaces that are a joy to use and support inclusive visions.'
         metaName='About me'
-        title='About me'
+        title='Uses'
       />
       <div className='container'>
         <PageWrapper>
@@ -28,8 +28,9 @@ const Uses: NextPage = () => {
               <div className='about-section'>
                 <h1>Uses</h1>
                 <p className='text-primary'>
-                  A somewhat comprehensive list of tools, apps, and more that i
-                  use on a daily basis to code things and sometimes design.
+                  A somewhat comprehensive list of tools, apps, and more that I
+                  use on a daily basis to code things and sometimes design. I
+                  hope you find some useful resources here
                 </p>
               </div>
               <div className='about-section'>

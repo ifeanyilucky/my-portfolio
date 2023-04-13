@@ -39,10 +39,9 @@ const About: NextPage = () => {
                   Whether I am working on a small project for a local business
                   or a large-scale application for a global brand, I approach
                   each task with the same level of enthusiasm and attention to
-                  detail. As a frontend developer in Lagos, I am constantly
-                  learning and adapting to new technologies and trends in order
-                  to stay ahead of the curve and deliver the best possible
-                  results for my clients.
+                  detail, I am constantly learning and adapting to new
+                  technologies and trends in order to stay ahead of the curve
+                  and deliver the best possible results for my clients.
                 </p>
                 <p className='text-primary'>
                   If you're interested in the tools and software i use check out

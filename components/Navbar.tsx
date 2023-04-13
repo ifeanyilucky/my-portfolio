@@ -44,6 +44,11 @@ export default function Navbar(): JSX.Element {
                   <a className='nav-link'>Work</a>
                 </Link>
               </li>
+              <li className='nav-item'>
+                <Link href='/uses'>
+                  <a className='nav-link'>Uses</a>
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>

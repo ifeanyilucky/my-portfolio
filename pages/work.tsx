@@ -21,6 +21,11 @@ const Projects = () => {
         <PageSection>
           <div>
             <h1>Selected projects.</h1> <br />
+            <p className='text-primary'>
+              I've worked on some neat projects throughout the years and these
+              are some of my favourites:
+            </p>{' '}
+            <br />
             <MansoryLayout>
               {projectsData.map((item: ProjectDetailProps, index: number) => (
                 <MansoryItem key={index} item={item} />
