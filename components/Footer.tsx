@@ -28,52 +28,67 @@ export default function Footer(): JSX.Element {
               <div>
                 <h3>Information</h3>
                 <div className='footer-list'>
-                  <p className='link'>
-                    <Link href='/about'>About</Link>
+                  <p>
+                    <Link href='/about'>
+                      <a className='link'>About</a>
+                    </Link>
                   </p>
                   <p className='link'>
-                    <Link href='/work'>Work</Link>
+                    <Link href='/work'>
+                      <a className='link'>Work</a>
+                    </Link>
                   </p>
                   <p className='link'>
-                    <Link href='/resume'>Resume</Link>
+                    <Link href='/resume'>
+                      {' '}
+                      <a className='link'>Resume</a>
+                    </Link>
                   </p>
                   <p className='link'>
-                    <Link href='/uses'>Uses</Link>
+                    <Link href='/uses'>
+                      <a className='link'>Uses</a>
+                    </Link>
                   </p>
                 </div>
               </div>
               <div>
                 <h3>Connect</h3>
                 <div className='footer-list'>
-                  <p className='link'>
+                  <p>
                     <a
                       href='https://twitter.com/ifeanyilucas'
                       target='_blank'
                       rel='noreferrer'
+                      className='link'
                     >
                       Twitter
                     </a>
                   </p>
-                  <p className='link'>
+                  <p>
                     <a
                       href='https://www.linkedin.com/in/ifeanyi-lucky-193b44194/'
                       target='_blank'
                       rel='noreferrer'
+                      className='link'
                     >
                       LinkedIn
                     </a>
                   </p>
-                  <p className='link'>
+                  <p>
                     <a
                       href='https://github.com/ifeanyilucky'
+                      className='link'
                       target='_blank'
+                      className='link'
                       rel='noreferrer'
                     >
                       Github
                     </a>
-                  </p>
-                  <p className='link'>
-                    <a href='mailto:ifeanyilucky360@gmail.com'>Email</a>
+                  </p>{' '}
+                  <p>
+                    <a className='link' href='mailto:ifeanyilucky360@gmail.com'>
+                      Email
+                    </a>
                   </p>
                 </div>
               </div>
