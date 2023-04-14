@@ -33,18 +33,17 @@ export default function Footer(): JSX.Element {
                       <a className='link'>About</a>
                     </Link>
                   </p>
-                  <p className='link'>
+                  <p>
                     <Link href='/work'>
                       <a className='link'>Work</a>
                     </Link>
                   </p>
-                  <p className='link'>
-                    <Link href='/resume'>
-                      {' '}
+                  <p>
+                    <Link href='/ifeanyi-lucky.pdf' target='_blank'>
                       <a className='link'>Resume</a>
                     </Link>
                   </p>
-                  <p className='link'>
+                  <p>
                     <Link href='/uses'>
                       <a className='link'>Uses</a>
                     </Link>
