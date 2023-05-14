@@ -10,11 +10,11 @@
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 140%;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 body {
   background-color: var(--color-black) !important;
-  color: var(--color-graphite);
+  color: var(--color-white);
 }
 
 :root {
