@@ -1,12 +1,9 @@
-/* -------------------------------------------------------------------------- */
-/*                            External Dependencies                           */
-/* -------------------------------------------------------------------------- */
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from "react";
 
-import styled, { css, createGlobalStyle } from 'styled-components';
+import styled, { css, createGlobalStyle } from "styled-components";
 
-import { Close, Github, Product } from './Icons';
-import { ISideBarModal } from '../types';
+import { Close, Github, Product } from "./Icons";
+import { ISideBarModal } from "../types";
 
 const SideBarModal = ({
   show,
@@ -18,7 +15,7 @@ const SideBarModal = ({
 }: ISideBarModal) => {
   const handleKeyPress = useCallback(
     (e: any) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         closeShow();
       }
     },
@@ -26,10 +23,10 @@ const SideBarModal = ({
   );
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyPress);
+      window.removeEventListener("keydown", handleKeyPress);
     };
   }, [handleKeyPress]);
   return (
@@ -37,47 +34,47 @@ const SideBarModal = ({
       {show && (
         <>
           <Body />
-          <Wrapper size={size} data-testid='sidebarmodal'>
+          <Wrapper size={size} data-testid="sidebarmodal">
             <Overlay
               overlayColor={overlayColor}
-              className='overlay'
+              className="overlay"
               onClick={() => closeShow()}
             />
-            <aside className='fadeInLeft'>
-              <div className='pos__relative'>
-                <div className='d-flex justify-content-between header'>
+            <aside className="fadeInLeft">
+              <div className="pos__relative">
+                <div className="d-flex justify-content-between header">
                   <button
                     onClick={() => closeShow()}
-                    className='none-button'
-                    type='button'
+                    className="none-button"
+                    type="button"
                   >
                     <Close />
                   </button>
                   <a
-                    href='#'
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
                       closeShow();
                     }}
-                    target='_blank'
-                    rel='noopener noreferrer'
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Back To Projects.
                   </a>
                 </div>
 
-                <div className='main__post'>
-                  <h3 className='mt-4'>{data.title}</h3>
-                  <p className='te mb-4'>{data.description}</p>
+                <div className="main__post">
+                  <h3 className="mt-4">{data.title}</h3>
+                  <p className="te mb-4">{data.description}</p>
                   <img src={data.cover} alt={data.title} />
                   <h4>About</h4>
                   <p>{data.about && data.about}</p>
                   <h4>Technologies</h4>
 
                   {data.technologies && (
-                    <p className='d-flex flex-wrap'>
+                    <p className="d-flex flex-wrap">
                       {data.technologies.map((tech, index) => (
-                        <span key={index} className='d-block mb-1'>
+                        <span key={index} className="d-block mb-1">
                           {tech}
                         </span>
                       ))}
@@ -89,8 +86,8 @@ const SideBarModal = ({
                   <p>
                     <a
                       href={data.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {data.link}
                     </a>
@@ -104,8 +101,8 @@ const SideBarModal = ({
                       <p>
                         <a
                           href={data.github}
-                          target='_blank'
-                          rel='noopener noreferrer'
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           {data.github}
                         </a>
@@ -115,19 +112,19 @@ const SideBarModal = ({
                 </div>
                 <a
                   href={data.link}
-                  className='open__project'
-                  target='_blank'
-                  id='cardHover'
-                  rel='noopener noreferrer'
+                  className="open__project"
+                  target="_blank"
+                  id="cardHover"
+                  rel="noopener noreferrer"
                 >
-                  Open Project{' '}
+                  Open Project{" "}
                   <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='24'
-                    height='24'
-                    viewBox='0 0 24 24'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
                   >
-                    <path d='M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z' />
+                    <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" />
                   </svg>
                 </a>
               </div>
@@ -140,16 +137,16 @@ const SideBarModal = ({
 };
 
 const generateSize = (size: string) => {
-  if (size === 'sm')
+  if (size === "sm")
     return css`
       width: 21.8em;
       padding: 1.5rem;
     `;
-  if (size === 'lg')
+  if (size === "lg")
     return css`
       width: 34em;
     `;
-  if (size === 'md')
+  if (size === "md")
     return css`
       width: 29em;
       padding: 2rem;
@@ -293,7 +290,7 @@ const Overlay = styled.div`
   top: 0;
   right: 0;
   background: ${({ overlayColor }: { overlayColor: string }) =>
-    overlayColor || 'rgba(0, 0, 0, 0.8)'};
+    overlayColor || "rgba(0, 0, 0, 0.8)"};
 `;
 
 export default SideBarModal;

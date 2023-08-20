@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { projects } from '../context/projects';
+import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import styled from "styled-components";
 
 export default function Navbar(): JSX.Element {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -14,39 +13,39 @@ export default function Navbar(): JSX.Element {
 
   return (
     <NavWrapper isOpen={isOpen}>
-      <div className='container'>
+      <div className="container">
         <nav>
-          <div className='logo'>
-            <Link href='/'>
-              <h3>Ifeanyi</h3>
+          <div className="logo">
+            <Link href="/">
+              <h3 className="logo-text">Ifeanyi.</h3>
             </Link>
           </div>
-          <div className='header-right'>
+          <div className="header-right">
             <div
-              className='menu-toggle'
+              className="menu-toggle"
               onClick={() => (isOpen ? setOpen(false) : setOpen(true))}
             />
           </div>
-          <div className='nav-list-wrapper' ref={navbarRef}>
-            <ul className='nav-list'>
-              <li className='nav-item'>
-                <Link href='/'>
-                  <a className='nav-link'>Home</a>
+          <div className="nav-list-wrapper" ref={navbarRef}>
+            <ul className="nav-list">
+              <li className="nav-item">
+                <Link href="/">
+                  <a className="nav-link">Home</a>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link href='/about'>
-                  <a className='nav-link'>About</a>
+              <li className="nav-item">
+                <Link href="/about">
+                  <a className="nav-link">About</a>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link href='/work'>
-                  <a className='nav-link'>Work</a>
+              <li className="nav-item">
+                <Link href="/work">
+                  <a className="nav-link">Work</a>
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link href='/uses'>
-                  <a className='nav-link'>Uses</a>
+              <li className="nav-item">
+                <Link href="/uses">
+                  <a className="nav-link">Uses</a>
                 </Link>
               </li>
             </ul>
@@ -58,6 +57,9 @@ export default function Navbar(): JSX.Element {
 }
 
 const NavWrapper = styled.div`
+  .logo-text {
+    font-weight: 800;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -79,7 +81,7 @@ const NavWrapper = styled.div`
       height: 32px;
       cursor: pointer;
       ::before {
-        content: '';
+        content: "";
         position: absolute;
         background: #fff;
         top: 50%;
@@ -88,28 +90,28 @@ const NavWrapper = styled.div`
         height: 2px;
         transition: margin 0.2s linear 0.3s, transform 0.2s linear 0s;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+          isOpen ? "rotate(45deg)" : "rotate(0)"};
       }
       ::after {
-        content: '';
+        content: "";
         position: absolute;
         background: #fff;
         left: 0;
         width: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? '100%' : '70%'};
+          isOpen ? "100%" : "70%"};
         top: 50%;
         height: 2px;
         margin-top: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? '0' : '8px'};
+          isOpen ? "0" : "8px"};
         transition: margin 0.2s linear 0.3s, transform 0.2s linear 0s;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+          isOpen ? "rotate(-45deg)" : "rotate(0)"};
       }
     }
   }
   .nav-list-wrapper {
     display: ${({ isOpen }: { isOpen: boolean }) =>
-      isOpen ? 'block' : 'none'};
+      isOpen ? "block" : "none"};
     height: 500px;
     width: 350px;
     position: absolute;
