@@ -17,11 +17,11 @@ export const bucketList: Array<{ title: string; done: boolean }> = [
   },
   {
     title: 'Start writing',
-    done: false,
+    done: true,
   },
   {
     title: 'Get a full-time remote job',
-    done: false,
+    done: true,
   },
 
   {
