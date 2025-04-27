@@ -14,55 +14,58 @@ const MansoryLayout: FunctionComponent<MansoryLayoutProps> = ({ children }) => {
 };
 
 const Layout = styled.div`
-  margin: 1.5em 0;
-  animation-duration: 1s;
+  margin: 2em 0;
+  animation-duration: 0.8s;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 0.8s;
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
   -webkit-animation-fill-mode: both;
-  max-width: auto;
-  column-gap: 1.5em;
-  @media only screen and (min-width: 1024px) {
+  width: 100%;
+  column-gap: 2em;
+
+  @media only screen and (min-width: 1200px) {
     column-count: 2;
   }
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
-    column-count: 1;
+
+  @media only screen and (max-width: 1199px) and (min-width: 768px) {
+    column-count: 2;
+    column-gap: 1.5em;
   }
 
-  @media only screen and (max-width: 767px) and (min-width: 540px) {
+  @media only screen and (max-width: 767px) {
     column-count: 1;
+    margin: 1em 0;
   }
+
   @keyframes fadeInUp {
     from {
-      margin-top: 4rem;
+      transform: translateY(30px);
       opacity: 0;
     }
 
     to {
-      margin-top: 1.5em;
+      transform: translateY(0);
       opacity: 1;
     }
   }
 
   @-webkit-keyframes fadeInUp {
     from {
-      margin-top: 4rem;
+      transform: translateY(30px);
       opacity: 0;
     }
 
     to {
-      margin-top: 1.5em;
+      transform: translateY(0);
       opacity: 1;
     }
   }
-  @media (max-width: 585px) {
-    opacity: 1 !important;
-  }
-  @media (max-width: 989px) {
-    opacity: 1 !important;
-  }
-  @media (max-width: 220px) {
+
+  /* Ensure animation doesn't interfere with mobile experience */
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    -webkit-animation: none;
     opacity: 1 !important;
   }
 `;

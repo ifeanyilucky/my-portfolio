@@ -156,7 +156,11 @@ const MansoryItemStyle = styled.div`
   }
   &:hover,
   &:focus {
-    cursor: none;
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
     &:after {
       opacity: 1;
     }

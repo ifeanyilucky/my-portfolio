@@ -19,39 +19,26 @@ const About: NextPage = () => {
               <div className='about-section'>
                 <h1 style={{ paddingBottom: '1.5rem' }}>About</h1>
                 <p className='text-primary'>
-                  As a frontend developer based in Lagos, I am passionate about
-                  creating visually appealing and user-friendly websites that
-                  engage and inspire users. With my in-depth knowledge of
-                  front-end technologies such as HTML, CSS, JavaScript, and
-                  React, I am able to bring designs to life and ensure seamless
-                  functionality across all devices.{' '}
+                As a versatile full-stack developer based in Lagos, I am passionate about crafting engaging, user-friendly digital experiences that inspire and connect with users. With expertise in front-end technologies like HTML, CSS, JavaScript, React, and React Native, I bring designs to life, ensuring seamless functionality and responsiveness across devices. My backend experience with Node.js allows me to build robust, scalable server-side solutions, while my proficiency in Swift for iOS development enables me to create intuitive, high-performance mobile applications.
                 </p>
                 <p className='text-primary'>
-                  I pride myself on my ability to work collaboratively with
-                  designers and back-end developers to ensure that every aspect
-                  of a website is optimized for performance, usability, and
-                  accessibility. From responsive layouts to interactive
-                  animations, I am committed to delivering high-quality code
-                  that meets the needs of both clients and end-users.
+                I thrive on collaboration, working closely with designers, developers, and stakeholders to optimize every aspect of a project for performance, usability, and accessibility. From responsive web layouts and interactive animations to efficient APIs and native mobile features, I am committed to delivering clean, high-quality code that meets the needs of clients and end-users alike.
                 </p>{' '}
                 <p className='text-primary'>
                   {' '}
-                  Whether I am working on a small project for a local business
-                  or a large-scale application for a global brand, I approach
-                  each task with the same level of enthusiasm and attention to
-                  detail, I am constantly learning and adapting to new
-                  technologies and trends in order to stay ahead of the curve
-                  and deliver the best possible results for my clients.
+                  Whether tackling a small-scale project for a local business or a complex application for a global brand, I approach each challenge with enthusiasm, precision, and a dedication to excellence. Constantly learning and embracing new technologies—such as React Native for cross-platform mobile development and Node.js for backend architecture—I stay ahead of industry trends to deliver innovative solutions that drive results.
                 </p>
                 <p className='text-primary'>
-                  If you're interested in the tools and software i use check out
+                  If you're interested in the tools and software I use, check out
                   my{' '}
                   <Link href='/uses'>
                     <a className='link'>uses</a>
                   </Link>{' '}
-                  page.
-                  {/* In my spare time i like to read Books, watch movies and
-                  attempt codewars challenge. */}
+                  page. You can also view my{' '}
+                  <Link href='/resume'>
+                    <a className='link'>resume</a>
+                  </Link>{' '}
+                  for more details about my professional experience.
                 </p>
               </div>
               {/* <div className='about-section'>
