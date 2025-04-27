@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import FooterLink from '../components/Footer';
 import MansoryLayout from '../components/mansory';
 import MansoryItem from '../components/mansory/mansory-item';
 import { ProjectsContext } from '../context';

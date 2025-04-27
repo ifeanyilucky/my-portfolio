@@ -1,8 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Page from '../components/Page';
 import HomeProjects from '../components/HomeProject';
 import { PageWrapper } from '../components/PageWrapper';
@@ -11,27 +8,35 @@ const Index: NextPage = () => {
   return (
     <div>
       <Page
-        metaContent={`Ifeanyi Lucky's Portfolio`}
+        metaContent={`Ifeanyi Lucky's Portfolio - Web Developer & Designer`}
         metaName='Home'
         title='Home'
       />
 
       <div className='container'>
-        <div className='mt-5'>
+        <div className='hero-section'>
           <PageWrapper>
-            <h1 className='display-4'>
+            <h1 className='hero-title'>
               Hi there, I'm glad you found me. My name is Ifeanyi Lucky and I'm
-              passionate about web development and design, currently working
-              with NextJs, VueJs, Typescript, GSAP, NodeJs and more.
-              <br />
-              <Link href='/about'>
-                <a className='link'> Read more</a>
-              </Link>
+              passionate about web development and design.
             </h1>
+            <p className='hero-subtitle'>
+              I specialize in creating modern web experiences using NextJs, VueJs,
+              Typescript, GSAP, NodeJs and more. I focus on building responsive,
+              accessible, and performant websites and applications.
+            </p>
+            <div className='hero-cta'>
+              <Link href='/about'>
+                <a className='cta-button primary'> Read more about me</a>
+              </Link>
+              <Link href='/work'>
+                <a className='cta-button secondary'>View my work</a>
+              </Link>
+            </div>
           </PageWrapper>
         </div>
+        <HomeProjects />
       </div>
-      {/* <HomeProjects /> */}
     </div>
   );
 };

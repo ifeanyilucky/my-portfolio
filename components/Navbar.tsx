@@ -80,76 +80,110 @@ const NavWrapper = styled.div`
       position: relative;
       height: 32px;
       cursor: pointer;
+      border-radius: 50%;
+      padding: 8px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
       ::before {
         content: "";
         position: absolute;
         background: #fff;
-        top: 50%;
-        left: 0;
-        width: 100%;
+        top: 40%;
+        left: 8px;
+        width: 16px;
         height: 2px;
-        transition: margin 0.2s linear 0.3s, transform 0.2s linear 0s;
+        transition: transform 0.3s ease, top 0.3s ease;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
           isOpen ? "rotate(45deg)" : "rotate(0)"};
+        transform-origin: center;
+        top: ${({ isOpen }: { isOpen: boolean }) =>
+          isOpen ? "50%" : "40%"};
       }
+
       ::after {
         content: "";
         position: absolute;
         background: #fff;
-        left: 0;
+        left: 8px;
         width: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "100%" : "70%"};
-        top: 50%;
+          isOpen ? "16px" : "12px"};
+        top: 60%;
         height: 2px;
-        margin-top: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "0" : "8px"};
-        transition: margin 0.2s linear 0.3s, transform 0.2s linear 0s;
+        transition: transform 0.3s ease, width 0.3s ease, top 0.3s ease;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
           isOpen ? "rotate(-45deg)" : "rotate(0)"};
+        transform-origin: center;
+        top: ${({ isOpen }: { isOpen: boolean }) =>
+          isOpen ? "50%" : "60%"};
       }
     }
   }
   .nav-list-wrapper {
     display: ${({ isOpen }: { isOpen: boolean }) =>
       isOpen ? "block" : "none"};
-    height: 500px;
-    width: 350px;
+    height: auto;
+    width: 300px;
     position: absolute;
-    top: 15px;
-    right: 100px;
+    top: 60px;
+    right: 0;
     z-index: 9999;
     background: #232323;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+
     @media (min-width: 768px) {
+      width: 300px;
       right: 15px;
     }
-    @media (min-width: 1100px) {
-      right: 80px;
-    }
-    @media (min-width: 1300px) {
-      right: 90px;
-    }
-    @media (min-width: 1500px) {
-      right: 100px;
-    }
+
     @media (max-width: 768px) {
       top: 0;
       right: 0;
       height: 100vh;
       width: 100%;
       position: fixed;
+      border-radius: 0;
     }
     .nav-list {
       display: flex;
       flex-flow: column;
       justify-content: flex-start;
       list-style-type: none;
-
-      margin-top: 4rem;
+      padding: 1.5rem;
+      margin-top: 0;
 
       .nav-item {
+        margin: 0.75rem 0;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateX(5px);
+        }
+
         .nav-link {
-          font-size: 24px !important;
+          font-size: 20px !important;
           color: #fff !important;
+          display: block;
+          padding: 0.5rem 0;
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 4rem;
+        padding: 2rem;
+
+        .nav-item .nav-link {
+          font-size: 24px !important;
         }
       }
     }

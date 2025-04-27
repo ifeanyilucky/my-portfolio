@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Footer(): JSX.Element {
   const today = new Date();
-  const date = `${today.getDate()}.${today.getMonth()}.${today.getFullYear()}`;
+  const date = `${today.getDate()}.${today.getMonth() + 1}.${today.getFullYear()}`;
   return (
     <footer>
       <div className="container">
@@ -25,40 +25,41 @@ export default function Footer(): JSX.Element {
           </div>
           <div className="column">
             <div className="right-footer-row">
-              <div>
+              <div className="footer-column">
                 <h3>Information</h3>
                 <div className="footer-list">
                   <p>
                     <Link href="/about">
-                      <a className="link">About</a>
+                      <a className="link" aria-label="About page">About</a>
                     </Link>
                   </p>
                   <p>
                     <Link href="/work">
-                      <a className="link">Work</a>
+                      <a className="link" aria-label="Work page">Work</a>
                     </Link>
                   </p>
                   <p>
-                    <Link href="/ifeanyi-lucky.pdf" target="_blank">
-                      <a className="link">Resume</a>
+                    <Link href="/resume">
+                      <a className="link" aria-label="View my resume">Resume</a>
                     </Link>
                   </p>
                   <p>
                     <Link href="/uses">
-                      <a className="link">Uses</a>
+                      <a className="link" aria-label="Uses page">Uses</a>
                     </Link>
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="footer-column">
                 <h3>Connect</h3>
                 <div className="footer-list">
                   <p>
                     <a
                       href="https://twitter.com/ifeanyilucas"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="link"
+                      aria-label="Twitter profile"
                     >
                       Twitter
                     </a>
@@ -67,8 +68,9 @@ export default function Footer(): JSX.Element {
                     <a
                       href="https://www.linkedin.com/in/ifeanyi-lucky-193b44194/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="link"
+                      aria-label="LinkedIn profile"
                     >
                       LinkedIn
                     </a>
@@ -78,13 +80,18 @@ export default function Footer(): JSX.Element {
                       href="https://github.com/ifeanyilucky"
                       className="link"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub profile"
                     >
                       Github
                     </a>
-                  </p>{" "}
+                  </p>
                   <p>
-                    <a className="link" href="mailto:ifeanyilucky360@gmail.com">
+                    <a
+                      className="link"
+                      href="mailto:ifeanyilucky360@gmail.com"
+                      aria-label="Email contact"
+                    >
                       Email
                     </a>
                   </p>
