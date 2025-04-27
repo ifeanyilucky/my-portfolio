@@ -85,7 +85,7 @@ const About: NextPage = () => {
                   ))}
                 </ul>
               </div>
-            </div>{' '}
+            </div>
           </div>
         </div>
       </PageWrapper>
