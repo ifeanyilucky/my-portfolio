@@ -9,7 +9,7 @@ export default function Page({
   title,
   metaName,
   metaContent,
-}: HeadProps): JSX.Element {
+}: HeadProps) {
   return (
     <Head>
       <title>{title} | Ifeanyi Lucky</title>

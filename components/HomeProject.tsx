@@ -1,7 +1,7 @@
 import { projects } from '../context/projects';
 import Link from 'next/link';
 
-export default function HomeProjects(): JSX.Element {
+export default function HomeProjects() {
   return (
     <section className='featured-projects'>
       <div className='section-header'>
