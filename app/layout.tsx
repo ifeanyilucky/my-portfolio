@@ -6,6 +6,7 @@ import BackgroundManager from "@/components/motion/BackgroundManager";
 import CustomCursor from "@/components/motion/CustomCursor";
 import PageTransition from "@/components/motion/PageTransition";
 import { LoaderProvider } from "@/context/LoaderContext";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
     title: "Ifeanyi Lucky | Senior Full-Stack Developer",
@@ -22,6 +23,7 @@ export default function RootLayout({
             <body className="antialiased selection:bg-accent selection:text-black">
                 <LoaderProvider>
                     <CustomCursor />
+                    <Navigation />
                     <Preloader />
                     <BackgroundManager />
                     <SmoothScroll>
