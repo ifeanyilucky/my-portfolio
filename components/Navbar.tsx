@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
 
-export default function Navbar(): JSX.Element {
+export default function Navbar() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const { pathname } = useRouter();
   const navbarRef = useRef(null);
@@ -98,10 +98,10 @@ const NavWrapper = styled.div`
         height: 2px;
         transition: transform 0.3s ease, top 0.3s ease;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "rotate(45deg)" : "rotate(0)"};
+    isOpen ? "rotate(45deg)" : "rotate(0)"};
         transform-origin: center;
         top: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "50%" : "40%"};
+    isOpen ? "50%" : "40%"};
       }
 
       ::after {
@@ -110,21 +110,21 @@ const NavWrapper = styled.div`
         background: #fff;
         left: 8px;
         width: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "16px" : "12px"};
+    isOpen ? "16px" : "12px"};
         top: 60%;
         height: 2px;
         transition: transform 0.3s ease, width 0.3s ease, top 0.3s ease;
         transform: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "rotate(-45deg)" : "rotate(0)"};
+    isOpen ? "rotate(-45deg)" : "rotate(0)"};
         transform-origin: center;
         top: ${({ isOpen }: { isOpen: boolean }) =>
-          isOpen ? "50%" : "60%"};
+    isOpen ? "50%" : "60%"};
       }
     }
   }
   .nav-list-wrapper {
     display: ${({ isOpen }: { isOpen: boolean }) =>
-      isOpen ? "block" : "none"};
+    isOpen ? "block" : "none"};
     height: auto;
     width: 300px;
     position: absolute;
