@@ -12,7 +12,7 @@ export default function Home() {
             <Expertise />
 
             {/* Final Friendly Call to Action */}
-            <section data-theme="dark" className="contact-section py-20 md:py-32 lg:py-48 flex flex-col items-center justify-center p-6 md:p-12 lg:p-20 relative overflow-hidden">
+            <section data-theme="dark" className="section contact-section flex flex-col items-center justify-center relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] aspect-square bg-accent opacity-[0.03] rounded-full blur-[200px]" />
 
                 <div className="container p-0 flex flex-col items-center z-10">

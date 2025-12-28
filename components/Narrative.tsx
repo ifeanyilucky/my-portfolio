@@ -28,7 +28,7 @@ export default function Narrative() {
     }, []);
 
     return (
-        <section id="narrative" ref={sectionRef} data-theme="dark" className="narrative-section section px-6 md:px-12 lg:px-20 bg-transparent overflow-hidden">
+        <section id="narrative" ref={sectionRef} data-theme="dark" className="narrative-section section bg-transparent overflow-hidden">
             <div className="container p-0">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
                     <div className="flex-1">

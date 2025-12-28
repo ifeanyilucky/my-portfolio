@@ -62,7 +62,7 @@ export default function Expertise() {
     ];
 
     return (
-        <section ref={sectionRef} data-theme="dark" className="section px-6 md:px-12 lg:px-20 border-t border-white/5 bg-transparent overflow-hidden">
+        <section ref={sectionRef} data-theme="dark" className="section border-t border-white/5 bg-transparent overflow-hidden">
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">
                     <div className="max-w-2xl">
