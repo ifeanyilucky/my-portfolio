@@ -16,26 +16,30 @@
 
     /* Transitions */
     --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+    /* Layout Defaults */
+    --container-padding: 1.5rem;
+    --section-spacing: 6rem;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 3rem;
+        --section-spacing: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
     :root {
         --container-padding: 5rem;
+        --section-spacing: 14rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --container-padding: 6rem;
         --section-spacing: 16rem;
-    }
-}
-
-@media (min-width: 2560px) {
-    :root {
-        --container-padding: 8rem;
-        --section-spacing: 20rem;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --container-padding: 1.25rem;
-        --section-spacing: 6rem;
     }
 }
 
@@ -116,7 +120,7 @@ ul {
 }
 
 .section {
-    padding: var(--section-spacing) 0;
+    padding: var(--section-spacing) var(--container-padding);
 }
 
 /* Typography Helpers */

@@ -60,12 +60,12 @@ export default function Navigation() {
         <>
             <nav
                 ref={navRef}
-                className={`fixed top-0 left-0 w-full px-6 md:px-12 lg:px-20 z-[9999] transition-all duration-700 pointer-events-none ${visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+                className={`fixed top-0 left-0 w-full px-6 md:px-12 lg:px-20 z-9999 transition-all duration-700 pointer-events-none ${visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
                     } ${scrolled ? 'py-4' : 'py-8'}`}
             >
                 <div className={`nav-container mx-auto max-w-[2200px] w-full flex justify-between items-center px-8 py-3 rounded-full border transition-all duration-500 pointer-events-auto shadow-2xl ${scrolled
-                        ? 'bg-black/90 backdrop-blur-xl border-white/20 scale-[0.95]'
-                        : 'bg-black/40 backdrop-blur-md border-white/10'
+                    ? 'bg-black/90 backdrop-blur-xl border-white/20 scale-[0.95]'
+                    : 'bg-black/40 backdrop-blur-md border-white/10'
                     }`}>
                     {/* Logo */}
                     <Link
@@ -111,7 +111,7 @@ export default function Navigation() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 bg-black z-[99999] md:hidden transition-all duration-700 ease-expo ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
+                className={`fixed inset-0 bg-black z-99999 md:hidden transition-all duration-700 ease-expo ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
                     }`}
             >
                 <div className="absolute top-10 right-10">

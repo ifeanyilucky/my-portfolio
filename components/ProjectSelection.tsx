@@ -62,7 +62,7 @@ export default function ProjectSelection() {
     };
 
     return (
-        <section id="projects" ref={containerRef} data-theme="light" className="projects-section section py-20 md:py-32 px-6 md:px-12 lg:px-20 transition-colors duration-700">
+        <section id="projects" ref={containerRef} data-theme="light" className="projects-section section transition-colors duration-700">
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 border-b border-(--text-color)/10 pb-10">
                     <div className="mb-8 md:mb-0">

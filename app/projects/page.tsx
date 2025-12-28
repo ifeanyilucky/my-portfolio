@@ -97,7 +97,7 @@ export default function ProjectsPage() {
         <div ref={containerRef} className="relative min-h-[300vh] bg-(--bg-color) text-(--text-color) overflow-x-hidden" data-theme="dark">
 
             {/* Background Grid Lines */}
-            <div className="fixed inset-0 flex justify-between px-6 md:px-12 lg:px-20 pointer-events-none z-0 opacity-10">
+            <div className="fixed inset-0 flex justify-between px-(--container-padding) pointer-events-none z-0 opacity-10">
                 {[...Array(12)].map((_, i) => (
                     <div key={i} className="grid-line w-px h-full bg-(--text-color)/50" />
                 ))}
