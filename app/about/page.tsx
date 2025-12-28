@@ -33,8 +33,8 @@ export default function AboutPage() {
     }, []);
 
     return (
-        <div ref={containerRef} className="min-h-screen bg-black text-white pt-32 pb-20 px-6 md:px-12 lg:px-20 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <div ref={containerRef} className="section bg-black text-white pt-32 pb-20 overflow-hidden">
+            <div className="container overflow-hidden">
                 <div className="mb-20">
                     <h1 className="about-title text-[15vw] md:text-[10vw] font-black leading-[0.8] uppercase tracking-tighter mb-10">
                         About <br /> <span className="text-secondary opacity-50">Ifeanyi.</span>

@@ -90,7 +90,7 @@ export default function Hero() {
     };
 
     return (
-        <section ref={containerRef} data-theme="dark" className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden pt-24 pb-16 md:pt-20">
+        <section ref={containerRef} data-theme="dark" className="relative min-h-screen flex flex-col justify-center px-(--container-padding) overflow-hidden pt-24 pb-16 md:pt-32">
             {/* Top Meta Bar */}
             <div ref={metaRef} className="absolute top-8 left-6 right-6 lg:left-20 lg:right-20 flex flex-row justify-between items-start text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-secondary z-20">
                 <div className="meta-item flex flex-col gap-1">
