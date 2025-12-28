@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useLoader } from '@/context/LoaderContext';
+import { preloadSounds } from '@/utils/sounds';
 
 export default function Preloader() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -11,37 +12,62 @@ export default function Preloader() {
     const { setIsLoaded } = useLoader();
 
     useEffect(() => {
-        const tl = gsap.timeline();
+        let ctx = gsap.context(() => {
+            const tl = gsap.timeline();
+            const counter = { val: 0 };
 
-        // Counter animation
-        const counter = { val: 0 };
-        gsap.to(counter, {
-            val: 100,
-            duration: 2.5,
-            ease: "power4.inOut",
-            onUpdate: () => setProgress(Math.floor(counter.val)),
-            onComplete: () => {
-                // Exit animation
-                gsap.timeline({
-                    onComplete: () => {
-                        setIsLoaded(true);
-                    }
-                })
-                    .to(counterRef.current, {
-                        y: -100,
-                        opacity: 0,
-                        duration: 1,
-                        ease: "expo.inOut"
+            // Start loading sounds in parallel, don't block animation start
+            const loadSounds = async () => {
+                try {
+                    await preloadSounds();
+                } catch (e) {
+                    // ignore
+                }
+            };
+            const soundsPromise = loadSounds();
+
+            // 1. Force Counter Animation (Must run)
+            tl.to(counter, {
+                val: 100,
+                duration: 2.0, // Slightly faster
+                ease: "power4.inOut",
+                onUpdate: () => setProgress(Math.floor(counter.val)),
+            });
+
+            // 2. Wait for sounds at the END of the timeline
+            tl.call(() => {
+                const finish = async () => {
+                    try {
+                        // Wait for sounds, but max out at 1s extra to prevent hanging
+                        await Promise.race([
+                            soundsPromise,
+                            new Promise(r => setTimeout(r, 1000))
+                        ]);
+                    } catch (e) { }
+
+                    // 3. Exit Sequence
+                    gsap.timeline({
+                        onComplete: () => setIsLoaded(true)
                     })
-                    .to(containerRef.current, {
-                        y: "-100%",
-                        duration: 1.2,
-                        ease: "expo.inOut"
-                    }, "-=0.5")
-                    .set(containerRef.current, { display: "none" });
-            }
-        });
+                        .to(counterRef.current, {
+                            y: -10,
+                            opacity: 0,
+                            duration: 0.8,
+                            ease: "power3.inOut"
+                        })
+                        .to(containerRef.current, {
+                            y: "-100%",
+                            duration: 1.0,
+                            ease: "power3.inOut"
+                        }, "-=0.4")
+                        .set(containerRef.current, { display: "none" });
+                };
+                finish();
+            });
 
+        }, containerRef);
+
+        return () => ctx.revert();
     }, [setIsLoaded]);
 
     return (
