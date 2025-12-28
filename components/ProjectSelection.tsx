@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { projects } from '@/context/projects';
 import Link from 'next/link';
 import gsap from 'gsap';
+import { playSound } from '@/utils/sounds';
 
 export default function ProjectSelection() {
     const [activeImage, setActiveImage] = useState<string | null>(null);
@@ -55,8 +56,13 @@ export default function ProjectSelection() {
         return () => ctx.revert();
     }, [isMobile]);
 
+    const handleProjectClick = (id: number) => {
+        playSound('click');
+        // Handle navigation or detail view
+    };
+
     return (
-        <section id="projects" ref={containerRef} data-theme="light" className="projects-section section min-h-screen py-32 px-6 md:px-12 lg:px-20 transition-colors duration-700">
+        <section id="projects" ref={containerRef} data-theme="light" className="projects-section section py-20 md:py-32 px-6 md:px-12 lg:px-20 transition-colors duration-700">
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 border-b border-(--text-color)/10 pb-10">
                     <div className="mb-8 md:mb-0">
@@ -73,8 +79,14 @@ export default function ProjectSelection() {
                         <div
                             key={project.id}
                             className="project-row group relative flex flex-col lg:flex-row lg:items-center justify-between py-10 md:py-16 border-b border-(--text-color)/10 transition-all duration-500 hover:lg:px-10 cursor-pointer overflow-hidden z-10"
-                            onMouseEnter={() => !isMobile && setActiveImage(project.cover)}
+                            onMouseEnter={() => {
+                                if (!isMobile) {
+                                    setActiveImage(project.cover);
+                                    playSound('hover');
+                                }
+                            }}
                             onMouseLeave={() => !isMobile && setActiveImage(null)}
+                            onClick={() => handleProjectClick(project.id)}
                         >
                             <div className="flex items-start gap-4 md:gap-8 lg:gap-12 relative z-10">
                                 <span className="text-secondary font-mono text-[10px] mt-2 md:mt-3">0{index + 1}</span>
@@ -125,10 +137,12 @@ export default function ProjectSelection() {
                     ))}
                 </div>
 
-                <div className="mt-20 flex justify-center relative z-20">
+                <div className="mt-10 md:mt-20 flex justify-center relative z-20">
                     <Link
                         href="/projects"
-                        className="text-secondary hover:text-accent uppercase text-[10px] md:text-xs tracking-[0.4em] font-bold py-12 transition-all hover:scale-110 active:scale-90"
+                        onMouseEnter={() => playSound('hover')}
+                        onClick={() => playSound('click')}
+                        className="text-secondary hover:text-accent uppercase text-[10px] md:text-xs tracking-[0.4em] font-bold py-8 md:py-12 transition-all hover:scale-110 active:scale-90"
                     >
                         [ Load More Archives ]
                     </Link>
