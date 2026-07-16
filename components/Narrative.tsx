@@ -35,22 +35,22 @@ export default function Narrative() {
                         <h2 className="narrative-item text-secondary text-xs md:text-sm uppercase tracking-[0.3em] mb-12 border-l-2 border-accent pl-6 font-bold">01 — HOW I WORK</h2>
                         <div ref={textRef} className="flex flex-col gap-12">
                             <h3 className="narrative-item text-3xl md:text-5xl lg:text-5xl font-black uppercase leading-[0.9] max-w-4xl tracking-tighter">
-                                I make websites <br /> that are easy to <br /> use and <span className="text-accent italic">fun</span> to look at.
+                                I build systems <br /> that stay reliable <br /> at <span className="text-accent italic">scale</span>.
                             </h3>
 
                             <div className="narrative-item bg-white/5 p-8 md:p-10 border border-white/5 rounded-2xl max-w-2xl">
                                 <p className="text-lg md:text-xl text-secondary leading-relaxed font-medium">
-                                    I'm a senior developer who loves turning ideas into reality.
-                                    I focus on building things that work perfectly and make sense to
-                                    the <span className="text-white">people</span> using them.
+                                    I'm a software engineer with 5+ years shipping backend and full-stack
+                                    systems for logistics, fintech, Web3, and marketplace platforms —
+                                    from provider-agnostic order orchestration to secure <span className="text-white">multi-chain wallet APIs</span>.
                                 </p>
                             </div>
 
                             <div className="narrative-item grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-white/10 mt-6">
                                 {[
-                                    { label: "EXPERIENCE", val: "6+ YRS" },
-                                    { label: "PROJECTS DONE", val: "40+" },
-                                    { label: "MAIN FOCUS", val: "APPS" },
+                                    { label: "EXPERIENCE", val: "5+ YRS" },
+                                    { label: "DOMAINS", val: "4" },
+                                    { label: "CORE FOCUS", val: "APIS" },
                                     { label: "SKILLSET", val: "FULL" }
                                 ].map((stat, i) => (
                                     <div key={i} className="flex flex-col gap-3 group px-4 py-2 hover:bg-white/5 rounded-xl transition-all">
@@ -71,7 +71,7 @@ export default function Narrative() {
                                 ✻
                             </div>
                             <p className="text-xs uppercase tracking-[0.4em] leading-loose opacity-40 font-bold group-hover:opacity-100 transition-opacity duration-700">
-                                Code as Art <br /> Process as Narrative <br /> Design as Strategy
+                                APIs as Contracts <br /> Systems as Product <br /> Reliability as Craft
                             </p>
                         </div>
 

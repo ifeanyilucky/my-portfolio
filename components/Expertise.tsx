@@ -33,30 +33,30 @@ export default function Expertise() {
 
     const data = [
         {
-            title: "Backend",
+            title: "Backend & APIs",
             skills: [
-                { name: "Node.js / Express", level: "95%" },
-                { name: "Python / FastAPI", level: "80%" },
+                { name: "Node.js / Express / NestJS", level: "95%" },
+                { name: "TypeScript", level: "92%" },
                 { name: "MongoDB / PostgreSQL", level: "90%" },
-                { name: "Docker / AWS", level: "75%" }
+                { name: "Redis / Sessions & Caching", level: "85%" }
+            ]
+        },
+        {
+            title: "Cloud & Systems",
+            skills: [
+                { name: "API Design & Distributed Workflows", level: "90%" },
+                { name: "JWT / Rate Limiting / Security", level: "88%" },
+                { name: "System Design", level: "85%" },
+                { name: "AWS / Docker", level: "82%" }
             ]
         },
         {
             title: "Frontend",
             skills: [
-                { name: "React / Next.js", level: "Gold" },
-                { name: "SwiftUI / Native", level: "Senior" },
-                { name: "Typescript", level: "Strict" },
-                { name: "Tailwind / CSS", level: "Fluid" }
-            ]
-        },
-        {
-            title: "Animations",
-            skills: [
-                { name: "GSAP / ScrollTrigger", level: "Master" },
-                { name: "Three.js / R3F", level: "Creative" },
-                { name: "Framer Motion", level: "Fluid" },
-                { name: "WebGL Shaders", level: "Study" }
+                { name: "React / Next.js", level: "90%" },
+                { name: "Tailwind CSS", level: "88%" },
+                { name: "React Native / SwiftUI", level: "80%" },
+                { name: "Vue.js", level: "70%" }
             ]
         }
     ];
@@ -66,11 +66,11 @@ export default function Expertise() {
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">
                     <div className="max-w-2xl">
-                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">02 — WHAT I CAN DO</h2>
-                        <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">I HAVE THE <br /> SKILLS YOU NEED</h3>
+                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">03 — WHAT I CAN DO</h2>
+                        <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">THE STACK BEHIND <br /> PRODUCTION SYSTEMS</h3>
                     </div>
                     <p className="text-secondary text-xs md:text-sm uppercase tracking-widest opacity-40 max-w-[200px] leading-loose">
-                        I build things that work well and grow with you.
+                        Backend-first, comfortable owning a feature end-to-end.
                     </p>
                 </div>
 
@@ -92,7 +92,7 @@ export default function Expertise() {
                                             <div
                                                 className="expertise-bar absolute inset-0 bg-accent/40 origin-left"
                                                 style={{ transform: 'scaleX(0)' }}
-                                                data-target={skill.level.includes('%') ? skill.level : (skill.level === 'Gold' || skill.level === 'Master' ? '100%' : '85%')}
+                                                data-target={skill.level}
                                             />
                                         </div>
                                     </li>

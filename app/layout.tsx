@@ -9,8 +9,13 @@ import { LoaderProvider } from "@/context/LoaderContext";
 import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
-    title: "Ifeanyi Lucky | Senior Full-Stack Developer",
-    description: "Senior Creative Frontend Engineer & Full-Stack Developer specializing in high-end web experiences.",
+    title: "Ifeanyi Lucky | Backend & Full-Stack Software Engineer",
+    description: "Software engineer with 5+ years building scalable backend and full-stack systems across logistics, fintech, Web3, and marketplace platforms — Node.js, TypeScript, React, and cloud infrastructure.",
+    openGraph: {
+        title: "Ifeanyi Lucky | Backend & Full-Stack Software Engineer",
+        description: "5+ years building scalable backend and full-stack systems across logistics, fintech, Web3, and marketplace platforms.",
+        type: "website",
+    },
 };
 
 export default function RootLayout({

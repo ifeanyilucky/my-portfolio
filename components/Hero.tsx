@@ -98,8 +98,8 @@ export default function Hero() {
                     <span className="opacity-50 tracking-tighter">9.9322° N, 3.3792° E</span>
                 </div>
                 <div className="meta-item flex flex-col items-end gap-1 text-right">
-                    <span className="text-accent font-bold">Available for select projects</span>
-                    <span className="opacity-50">©2025 Folio V2</span>
+                    <span className="text-accent font-bold">Open to new opportunities</span>
+                    <span className="opacity-50">©2026 Folio V2</span>
                 </div>
             </div>
 
@@ -107,20 +107,20 @@ export default function Hero() {
                 <div className="max-w-7xl">
                     <div className="mb-6 md:mb-8 overflow-hidden">
                         <span className="inline-block text-accent text-xs md:text-sm uppercase tracking-[0.3em] font-black translate-y-full animate-reveal">
-                            Building Apps & Websites for Everyone
+                            Backend & Full-Stack Software Engineer
                         </span>
                     </div>
 
                     <h1 ref={titleRef} className="text-h1 font-black mb-8 md:mb-12 leading-[0.8] -ml-1 uppercase tracking-tighter">
                         I BUILD <br />
-                        COOL <br />
-                        THINGS.
+                        SYSTEMS <br />
+                        THAT SCALE.
                     </h1>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end">
                         <div className="flex flex-col gap-8">
                             <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl text-secondary leading-relaxed max-w-xl font-medium">
-                                Hi! I'm Ifeanyi. I build websites and apps that are easy to use, look great, and just work. No complicated talk—just good results.
+                                Hi, I'm Ifeanyi — a backend-focused full-stack engineer. I design APIs, distributed workflows, and cloud infrastructure for logistics, fintech, and marketplace platforms, then ship the product on top.
                             </p>
                         </div>
 
