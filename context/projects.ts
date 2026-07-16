@@ -55,7 +55,7 @@ Under the hood, the platform normalizes pricing, ETA, and order status across mu
       id: 3,
       description:
         "Concierge car-wash booking system for a Texas fitness-club network — real-time slot availability, tiered pricing, and Stripe checkout with deposit holds, built end-to-end.",
-      year: 2025,
+      year: 2026,
       cover: "/projects/aquadashcarwash.com.png",
       technologies: ["Next.js", "TypeScript", "Sanity CMS", "PostgreSQL", "Supabase", "Stripe", "Tailwind CSS"],
       type: ["fullstack", "booking", "contract"],
