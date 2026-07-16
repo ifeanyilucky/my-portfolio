@@ -34,12 +34,11 @@ export default function Home() {
 
                 <footer className="mt-32 w-full flex flex-col lg:flex-row justify-between items-center text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-secondary opacity-40 py-6 border-t border-white/5">
                     <div className="flex gap-8 md:gap-12 mb-6 lg:mb-0">
-                        <a href="https://linkedin.com" className="hover:text-accent font-bold transition-colors">LinkedIn</a>
-                        <a href="https://github.com" className="hover:text-accent font-bold transition-colors">Github</a>
-                        <a href="https://twitter.com" className="hover:text-accent font-bold transition-colors">Twitter</a>
+                        <a href="https://www.linkedin.com/in/ifeanyi-lucky-193b44194/" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold transition-colors">LinkedIn</a>
+                        <a href="https://github.com/ifeanyilucky" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold transition-colors">Github</a>
                     </div>
                     <div className="text-center lg:text-right">
-                        Created by Ifeanyi ©2025
+                        Created by Ifeanyi ©2026
                     </div>
                 </footer>
             </section>

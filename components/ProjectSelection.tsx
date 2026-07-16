@@ -70,7 +70,7 @@ export default function ProjectSelection() {
                         <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight">Case Studies</h3>
                     </div>
                     <p className="text-secondary text-left md:text-right max-w-[240px] text-[10px] md:text-xs uppercase tracking-[0.2em] leading-loose opacity-60">
-                        A curated deep-dive into digital <br className="hidden md:block" /> storytelling and engineered <br className="hidden md:block" /> experiences.
+                        A curated look at systems I've <br className="hidden md:block" /> designed and products I've <br className="hidden md:block" /> shipped end-to-end.
                     </p>
                 </div>
 

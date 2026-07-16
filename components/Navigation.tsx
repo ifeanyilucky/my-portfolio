@@ -47,6 +47,7 @@ export default function Navigation() {
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects' },
         { name: 'About', href: '/about' },
+        { name: 'Resume', href: '/ifeanyilucky1.pdf', external: true },
         { name: 'Contact', href: 'mailto:ifeanyilucky360@gmail.com' },
     ];
 
@@ -85,6 +86,8 @@ export default function Navigation() {
                             <Link
                                 key={link.name}
                                 href={link.href}
+                                target={link.external ? '_blank' : undefined}
+                                rel={link.external ? 'noopener noreferrer' : undefined}
                                 className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/70 hover:text-accent transition-colors"
                                 onClick={() => playSound('click')}
                                 onMouseEnter={() => playSound('hover')}
@@ -122,6 +125,8 @@ export default function Navigation() {
                         <Link
                             key={link.name}
                             href={link.href}
+                            target={link.external ? '_blank' : undefined}
+                            rel={link.external ? 'noopener noreferrer' : undefined}
                             onClick={handleLinkClick}
                             className="mobile-link text-5xl font-black uppercase tracking-tighter text-white hover:text-accent transition-colors"
                         >

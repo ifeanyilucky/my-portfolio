@@ -93,8 +93,8 @@ export default function Preloader() {
             </div>
 
             <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">
-                <div>Ifeanyi Lucky — ©2025</div>
-                <div>Creative Engineering</div>
+                <div>Ifeanyi Lucky — ©2026</div>
+                <div>Backend & Full-Stack Engineering</div>
             </div>
         </div>
     );

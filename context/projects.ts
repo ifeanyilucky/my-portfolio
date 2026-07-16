@@ -11,53 +11,103 @@ export const projects: Array<{
   about: string;
 }> = [
     {
-      title: "Aplet360",
-      link: "https://aplet360.vercel.app",
+      title: "Skeep",
+      link: "https://useskeep.com",
       id: 1,
-      description: "Aplet360 is your premier platform for finding and renting quality apartments across Nigeria. Whether you're looking for a long-term home or a short-term stay, find the perfect furnished apartment with flexible payment options and hassle-free management.",
-      year: 2021,
-      cover: "/projects/aplet360.png",
+      description:
+        "A WhatsApp-native food, ride, and logistics ordering platform — built the conversational bot flow, vendor dashboard, admin panel, and rider app powering the entire ordering pipeline.",
+      year: 2025,
+      cover: "/projects/useskeep.com.png",
       technologies: [
-        "React",
-        "Node JS",
+        "Node.js",
+        "TypeScript",
+        "Next.js",
+        "React Native",
+        "Express",
         "MongoDB",
-        "Tailwind CSS",
-        "Zustand",
-        "Context API",
+        "Redis",
+        "WhatsApp Cloud API",
       ],
-      type: ["project", "others"],
+      type: ["fullstack", "logistics", "whatsapp"],
       github: "",
       about:
-        `Aplet360 was created to address the growing need for quality apartment rentals in Nigeria. We started as a small platform connecting property owners with those seeking short-term stays, and have since evolved into a comprehensive rental solution.
+        `Skeep lets customers order food, book rides, and arrange delivery entirely inside WhatsApp — no separate app required. I built the WhatsApp bot handling the full automated ordering flow (menu browsing, order placement, payment, live tracking), the vendor dashboard for restaurant partners, the admin panel for overseeing vendors and riders, and the rider app for the delivery fleet.
 
-Today, we focus primarily on long-term apartment rentals while still offering short-term accommodations. Our platform provides flexible payment options, including two monthly payment plans to make quality housing accessible to everyone.
-
-With thousands of satisfied residents and property owners, we continue to grow our offerings while maintaining our commitment to quality, transparency, and exceptional service.`,
+Under the hood, the platform normalizes pricing, ETA, and order status across multiple third-party providers, with Redis-backed session management keeping multi-step conversations reliable and provider failover keeping orders flowing when a partner API goes down.`,
     },
     {
-      title: "Auramuse",
-      link: "https://auramuse.vercel.app",
+      title: "GetDropa",
+      link: "https://getdropa.com",
       id: 2,
-      description: "Auramuse is an AI-powered music recommendation system that generates personalized song suggestions based on your current mood and musical preferences.",
-      year: 2021,
-      cover: "/projects/auramuse.png",
-      technologies: [
-        "React",
-        "Node JS",
-        "MongoDB",
-        "Material UI",
-        "Redux",
-        "Context API",
-      ],
+      description:
+        "A white-label logistics operating system — built the multi-tenant portal letting courier companies run branded instances, plus the rider app for dispatch, tracking, and proof of delivery.",
+      year: 2026,
+      cover: "/projects/getdropa.com.png",
+      technologies: ["React Native", "Next.js", "Node.js", "TypeScript", "PostgreSQL"],
+      type: ["fullstack", "logistics", "white-label"],
+      github: "",
+      about:
+        "Dropa gives smaller courier and delivery companies the same dispatch, tracking, and payment tools that larger logistics players use, as a white-label platform. I built the multi-tenant portal that lets each logistics company run its own branded instance — custom domain, logo, colors — from one shared codebase, and the white-label rider app riders use to receive assignments, update delivery status, and capture proof of delivery.",
+    },
+    {
+      title: "AquaDash",
+      link: "https://aquadashcarwash.com",
+      id: 3,
+      description:
+        "Concierge car-wash booking system for a Texas fitness-club network — real-time slot availability, tiered pricing, and Stripe checkout with deposit holds, built end-to-end.",
+      year: 2025,
+      cover: "/projects/aquadashcarwash.com.png",
+      technologies: ["Next.js", "TypeScript", "Sanity CMS", "PostgreSQL", "Supabase", "Stripe", "Tailwind CSS"],
+      type: ["fullstack", "booking", "contract"],
+      github: "",
+      about:
+        "AquaDash brings on-site car detailing to customers at premium fitness clubs and leisure venues across Texas. I built the booking system end-to-end: slot-availability logic accounting for per-service buffer windows, group-booking capacity, minimum lead time, and timezone-safe date math; a Stripe integration covering full payments and partial deposits tied to reservation holds; and a full coupon engine from CMS schema through to checkout. I also built the lifecycle notifications (email + SMS) for confirmations, reschedules, and no-shows.",
+    },
+    {
+      title: "Glamyad",
+      link: "https://glamyad.com",
+      id: 4,
+      description:
+        "Booking marketplace connecting clients with verified beauty and wellness professionals — built the provider dashboard for managing bookings, pricing, availability, and no-show protection.",
+      year: 2026,
+      cover: "/projects/glamyad.com.png",
+      technologies: ["Node.js", "TypeScript", "Next.js"],
+      type: ["fullstack", "booking", "marketplace"],
+      github: "",
+      about:
+        "Glamyad connects clients with verified stylists, barbers, nail techs, and makeup artists, who they can search by specialty, compare on price, and book with a secured deposit. I built the service-provider dashboard where professionals manage their bookings, services, pricing, and availability in one place, including the no-show protection flow built around automated deposits.",
+    },
+    {
+      title: "Aplet360",
+      link: "https://aplet360.vercel.app",
+      id: 5,
+      description:
+        "Full-stack real estate platform for property listings, search, and tenant onboarding — RESTful APIs with JWT auth and role-based access, deployed on AWS.",
+      year: 2025,
+      cover: "/projects/aplet360.png",
+      technologies: ["React", "Node.js", "MongoDB", "AWS", "Tailwind CSS", "JWT"],
+      type: ["fullstack", "proptech", "contract"],
+      github: "",
+      about:
+        "Aplet360 helps renters find and book quality apartments across Nigeria, with flexible payment plans and tenant onboarding built in. I designed and built RESTful APIs with JWT-based authentication and role-based access control, improved frontend performance through code splitting, optimized backend queries, and deployed the platform on AWS with an eye toward scalability and uptime.",
+    },
+    {
+      title: "Jentomed Hospital",
+      link: "https://jentomed.com",
+      id: 6,
+      description: "Specialized hospital in Ibadan, Nigeria.",
+      year: 2022,
+      cover: "/projects/www.jentomed.com.png",
+      technologies: ["NextJs", "Context API"],
       type: ["project", "others"],
       github: "",
       about:
-        "Auramuse is an AI-powered music recommendation system that generates personalized song suggestions based on your current mood and musical preferences. Whether you're feeling upbeat, contemplative, or anything in between, Auramuse will curate a playlist that perfectly matches your mood. With Auramuse, you'll never have to wonder what to listen to next. Simply tell us how you're feeling, and we'll take care of the rest.",
+        "Jentomed Specialist Hospital is a multi-disciplinary private healthcare facility focusing on the best possible clinical outcomes for our patients and their families.",
     },
     {
       title: "Thebrik",
       link: "https://thebrik.co",
-      id: 3,
+      id: 7,
       description: "Hostel renting platform for students across Nigeria",
       year: 2021,
       cover: "/projects/thebrik.png",
@@ -74,72 +124,4 @@ With thousands of satisfied residents and property owners, we continue to grow o
       about:
         "We are building the most convenient way for the modern day Nigeria students to get their suitable hostel. Our customers are at the center of everything we do, and we are obsessed with creating a pleasant experience throughout their entire journey.",
     },
-
-    {
-      title: "Jentomed Hospital",
-      link: "https://jentomed.com",
-      id: 6,
-      description: "Specialized hospital in Ibadan, Nigeria.",
-      year: 2022,
-      cover: "/projects/www.jentomed.com.png",
-      technologies: ["NextJs", "Context API"],
-      type: ["project", "others"],
-      github: "",
-      about:
-        "Jentomed Specialist Hospital is a multi-disciplinary private healthcare facility focusing on the best possible clinical outcomes for our patients and their families.",
-    },
-
-    {
-      title: "Carter",
-      link: "https://carter-rose.vercel.app",
-      id: 5,
-      description: "Blog for Artists",
-      year: 2022,
-      cover: "/projects/carter-rose.vercel.app.png",
-      technologies: ["React", "NextJs", "Context API", "Sanity CMS"],
-      type: ["project", "blog", "others"],
-      github: "https://github.com/ifeanyilucky/carter",
-      about:
-        "Carter blog is a content platform which allows readers to engage in a wide range of dynamic and innovative ideas expressed through different art forms.",
-    },
-
-    {
-      title: "Streamroan",
-      link: "https://stream-roan.vercel.app",
-      id: 45,
-      description: "A landing page UI built with React",
-      year: 2022,
-      cover: "/projects/streamroan.jpg",
-      technologies: ["Vuejs", "Typescript"],
-      type: ["project", "personal"],
-      github: "https://github.com/ifeanyilucky/stream",
-      about:
-        "Streamroan is a revolutionary asset streaming protocol that brings subscriptions, salaries, vesting, and rewards to DAOs and crypto-native businesses worldwide.",
-    },
-    // {
-    //   title: "Yousavie",
-    //   link: "https://yousavie.vercel.com",
-    //   id: 2,
-    //   description: "Download youtube videos for free",
-    //   year: 2021,
-    //   cover: "/projects/yousavie.png",
-    //   technologies: ["React", "NextJs", "Tailwind", "Typescript"],
-    //   type: ["project", "others"],
-    //   github: "https://github.com/ifeanyilucky/yousavie",
-    //   about:
-    //     "Download youtube videos with a high-quality MP4/MP3 in the Yousavie video downloader for 100% free, easy-to-use, and unlimited.",
-    // },
-    // {
-    //   title: "Movie Info Search",
-    //   link: "",
-    //   id: 5,
-    //   description: "Movie information search",
-    //   year: 2022,
-    //   cover: "/projects/moviesearch.jpg",
-    //   technologies: ["React", "Context API", "Typescript"],
-    //   type: ["project", "others"],
-    //   github: "https://github.com/ifeanyilucky/moviesearch",
-    //   about:
-    //     "MovieSearch is an online website of information built with React JS  to search for films, television series, podcasts, home videos, video games, and watching thrillers online – including cast, production crew and personal biographies and so much more. MovieSearch is currently in WIP",
-    // },
   ];
