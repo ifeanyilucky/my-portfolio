@@ -2,49 +2,6 @@ import { projects } from "@/context/projects";
 import Navigation from "@/components/Navigation";
 import ProjectRow from "@/components/ProjectRow";
 
-const IconSkeep = () => (
-    <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="inline-block align-middle"
-    >
-        <path
-            d="M12 2L21 7V17L12 22L3 17V7L12 2Z"
-            stroke="#8FD14F"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-        />
-        <path
-            d="M12 12L21 7M12 12V22M12 12L3 7"
-            stroke="#8FD14F"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-        />
-    </svg>
-);
-
-const IconGetDropa = () => (
-    <svg
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="inline-block align-middle"
-    >
-        <path d="M5 12a7 7 0 0 1 7-7" stroke="#E9E5DA" strokeWidth="1.6" strokeLinecap="round" />
-        <path
-            d="M3 12a9 9 0 0 1 9-9"
-            stroke="#E9E5DA"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            opacity="0.6"
-        />
-        <circle cx="12" cy="12" r="2.5" fill="#E9E5DA" />
-    </svg>
-);
-
 const FooterLink = ({
     href,
     children,
@@ -77,27 +34,9 @@ export default function Home() {
                     </div>
 
                     <p className="text-[17px] text-[#B8B5AC] mb-10">
-                        Creator of{" "}
-                        <span className="inline-flex items-center gap-1.5">
-                            <IconSkeep />
-                            <a
-                                href="https://useskeep.com"
-                                className="text-[#EFECE3] underline decoration-[#4a4a46] underline-offset-4 transition-colors hover:decoration-[#8FD14F]"
-                            >
-                                Skeep
-                            </a>
-                        </span>{" "}
-                        and{" "}
-                        <span className="inline-flex items-center gap-1.5">
-                            <IconGetDropa />
-                            <a
-                                href="https://getdropa.com"
-                                className="text-[#EFECE3] underline decoration-[#4a4a46] underline-offset-4 transition-colors hover:text-white"
-                            >
-                                GetDropa
-                            </a>
-                        </span>
-                        .
+                        Backend and full-stack engineer with 5+ years designing APIs, distributed
+                        workflows, and cloud infrastructure — then shipping the product on top.
+                        I've built for logistics, fintech, Web3, and marketplace platforms.
                     </p>
 
                     <div className="flex items-center gap-3 mb-12">
