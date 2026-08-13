@@ -1,6 +1,7 @@
 import { projects } from "@/context/projects";
 import Navigation from "@/components/Navigation";
 import ProjectRow from "@/components/ProjectRow";
+import NowPlaying from "@/components/NowPlaying";
 
 const FooterLink = ({
     href,
@@ -50,11 +51,7 @@ export default function Home() {
                     </div>
 
                     {/* Now playing box */}
-                    <div className="rounded-xl border border-[#242422] bg-[#131311] px-6 py-5">
-                        <span className="text-[15px] text-[#8B8A85]">
-                            Not listening to anything right now.
-                        </span>
-                    </div>
+                    <NowPlaying />
                 </header>
 
                 {/* Projects */}
