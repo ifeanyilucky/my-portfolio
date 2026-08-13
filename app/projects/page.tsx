@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block border-t border-[#242422] py-8"
+                                className="group relative block border-t border-[#242422] py-8"
                             >
                                 <h3 className="font-serif text-[26px] text-[#EFECE3] mb-2">
                                     {project.title}
@@ -60,6 +60,18 @@ export default function ProjectsPage() {
                                         </span>
                                     ))}
                                 </div>
+
+                                <span className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 text-[#8FD14F] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M7 17L17 7M17 7H8M17 7V16"
+                                            stroke="currentColor"
+                                            strokeWidth="1.6"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </span>
                             </a>
                         ))}
                     </div>
