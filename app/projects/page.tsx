@@ -26,8 +26,8 @@ export default function ProjectsPage() {
                             Scope
                         </div>
                         <p className="text-[15px] text-[#B8B5AC]">
-                            7 projects · 2021–2026 · logistics, fintech, Web3, marketplace, and
-                            proptech
+                            9 projects · 2021–2026 · logistics, fintech, Web3, marketplace,
+                            proptech, open-source & studio
                         </p>
                     </div>
                 </header>

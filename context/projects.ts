@@ -124,4 +124,41 @@ Under the hood, the platform normalizes pricing, ETA, and order status across mu
       about:
         "We are building the most convenient way for the modern day Nigeria students to get their suitable hostel. Our customers are at the center of everything we do, and we are obsessed with creating a pleasant experience throughout their entire journey.",
     },
+    {
+      title: "Dolly",
+      link: "https://github.com/ifeanyilucky/dollyapp",
+      id: 8,
+      description:
+        "Open-source macOS screen recorder (Tauri v2 + Rust + React) that auto-generates smooth zoom/pan motion from a 120Hz cursor track, with fully non-destructive editing after capture. Custom .dol bundle format with zero-copy playback via a dol:// protocol, and a shared motion engine between preview and export for guaranteed output fidelity.",
+      year: 2026,
+      cover: "",
+      technologies: [
+        "Tauri",
+        "Rust",
+        "React",
+        "ScreenCaptureKit",
+        "VideoToolbox",
+        "wgpu",
+        "WebGL2",
+        "Zustand",
+      ],
+      type: ["open-source", "desktop", "personal"],
+      github: "https://github.com/ifeanyilucky/dollyapp",
+      about:
+        "Dolly is an open-source macOS screen recorder that turns ordinary captures into polished, motion-driven recordings. It records a 120Hz cursor track while capturing and, after recording, lets you auto-generate smooth zoom/pan camera moves from that track — no keyframing required. Editing is fully non-destructive, and captures are stored in a custom .dol bundle format that plays back with zero-copy fast seeking through a registered dol:// protocol. A shared motion engine drives both the live preview and the export pipeline, so what you preview is exactly what you export.",
+    },
+    {
+      title: "Casimier Studios",
+      link: "https://casimier-studios.vercel.app/",
+      id: 9,
+      description:
+        "Website for Casimier Studios, a Lagos-based photography and film studio — portraits, editorial, product photography, and cinematography, directed and colour-graded in-house. Full session showcases, a motion reels section, and a booking flow.",
+      year: 2026,
+      cover: "",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Cloudinary"],
+      type: ["fullstack", "photography", "studio"],
+      github: "",
+      about:
+        "Casimier Studios is a professional photography and film studio in Lagos — from portraits and corporate headshots to product, editorial, and brand films with in-house creative direction and colour grading. This is the studio's full site: a cinematic 'Selected works' gallery of sessions, a films reel, and a connect/booking flow.",
+    },
   ];
