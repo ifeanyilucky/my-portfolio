@@ -49,8 +49,8 @@ export default function AboutPage() {
                             What I use
                         </div>
                         <p className="text-[15px] text-[#B8B5AC] leading-relaxed">
-                            Node.js · TypeScript · Next.js · React · MongoDB · PostgreSQL · Redis ·
-                            AWS · Docker
+                            Node.js · Express · NestJS · TypeScript · React · Next.js · Rust ·
+                            PostgreSQL · MySQL · SQLite · MongoDB · Redis · AWS · Docker
                         </p>
                     </div>
                 </header>
