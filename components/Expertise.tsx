@@ -66,7 +66,7 @@ export default function Expertise() {
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">
                     <div className="max-w-2xl">
-                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">03 — WHAT I CAN DO</h2>
+                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">03 · WHAT I CAN DO</h2>
                         <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">THE STACK BEHIND <br /> PRODUCTION SYSTEMS</h3>
                     </div>
                     <p className="text-secondary text-xs md:text-sm uppercase tracking-widest opacity-40 max-w-[200px] leading-loose">

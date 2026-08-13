@@ -66,7 +66,7 @@ export default function ProjectSelection() {
             <div className="container p-0">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 border-b border-(--text-color)/10 pb-10">
                     <div className="mb-8 md:mb-0">
-                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">02 — Selection</h2>
+                        <h2 className="text-secondary text-xs md:text-sm uppercase tracking-[0.2em] mb-4 border-l border-accent pl-4">02 · Selection</h2>
                         <h3 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight">Case Studies</h3>
                     </div>
                     <p className="text-secondary text-left md:text-right max-w-[240px] text-[10px] md:text-xs uppercase tracking-[0.2em] leading-loose opacity-60">

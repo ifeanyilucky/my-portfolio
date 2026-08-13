@@ -120,7 +120,7 @@ export default function Hero() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-end">
                         <div className="flex flex-col gap-8">
                             <p ref={subtitleRef} className="text-lg md:text-xl lg:text-2xl text-secondary leading-relaxed max-w-xl font-medium">
-                                Hi, I'm Ifeanyi — a backend-focused full-stack engineer. I design APIs, distributed workflows, and cloud infrastructure for logistics, fintech, and marketplace platforms, then ship the product on top.
+                                Hi, I'm Ifeanyi, a backend-focused full-stack engineer. I design APIs, distributed workflows, and cloud infrastructure for logistics, fintech, and marketplace platforms, then ship the product on top.
                             </p>
                         </div>
 

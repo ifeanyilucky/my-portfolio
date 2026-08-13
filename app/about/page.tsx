@@ -4,12 +4,12 @@ const process = [
     {
         name: "Talk",
         description:
-            "We talk through the problem — the scale you need, the constraints you're under, and what \u201cdone\u201d looks like.",
+            "We talk through the problem: the scale you need, the constraints you're under, and what \u201cdone\u201d looks like.",
     },
     {
         name: "Plan",
         description:
-            "I design the system first — data models, API contracts, and trade-offs — before writing a line of code.",
+            "I design the system first: data models, API contracts, and trade-offs, before writing a line of code.",
     },
     {
         name: "Build",
@@ -37,8 +37,8 @@ export default function AboutPage() {
                     </div>
 
                     <p className="text-[17px] text-[#B8B5AC] mb-10">
-                        I build backend systems and full-stack products that hold up in production —
-                        for logistics, fintech, Web3, and marketplace platforms. 5+ years designing
+                        I build backend systems and full-stack products that hold up in production
+                        across logistics, fintech, Web3, and marketplace platforms. 5+ years designing
                         APIs, distributed workflows, and cloud infrastructure, then shipping the
                         product on top with React and Next.js.
                     </p>

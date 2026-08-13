@@ -35,7 +35,7 @@ export default function Home() {
 
                     <p className="text-[17px] text-[#B8B5AC] mb-10">
                         Backend and full-stack engineer with 5+ years designing APIs, distributed
-                        workflows, and cloud infrastructure — then shipping the product on top.
+                        workflows, and cloud infrastructure, then shipping the product on top.
                         I've built for logistics, fintech, Web3, and marketplace platforms.
                     </p>
 

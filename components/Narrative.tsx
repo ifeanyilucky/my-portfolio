@@ -32,7 +32,7 @@ export default function Narrative() {
             <div className="container p-0">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
                     <div className="flex-1">
-                        <h2 className="narrative-item text-secondary text-xs md:text-sm uppercase tracking-[0.3em] mb-12 border-l-2 border-accent pl-6 font-bold">01 — HOW I WORK</h2>
+                        <h2 className="narrative-item text-secondary text-xs md:text-sm uppercase tracking-[0.3em] mb-12 border-l-2 border-accent pl-6 font-bold">01 · HOW I WORK</h2>
                         <div ref={textRef} className="flex flex-col gap-12">
                             <h3 className="narrative-item text-3xl md:text-5xl lg:text-5xl font-black uppercase leading-[0.9] max-w-4xl tracking-tighter">
                                 I build systems <br /> that stay reliable <br /> at <span className="text-accent italic">scale</span>.
@@ -41,7 +41,7 @@ export default function Narrative() {
                             <div className="narrative-item bg-white/5 p-8 md:p-10 border border-white/5 rounded-2xl max-w-2xl">
                                 <p className="text-lg md:text-xl text-secondary leading-relaxed font-medium">
                                     I'm a software engineer with 5+ years shipping backend and full-stack
-                                    systems for logistics, fintech, Web3, and marketplace platforms —
+                                    systems for logistics, fintech, Web3, and marketplace platforms,
                                     from provider-agnostic order orchestration to secure <span className="text-white">multi-chain wallet APIs</span>.
                                 </p>
                             </div>
