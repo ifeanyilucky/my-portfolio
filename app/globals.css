@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&display=swap");
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Newsreader", ui-serif, Georgia, serif;
+}
 
 :root {
-    /* Color System - Driven by GSAP ScrollTrigger */
-    --bg-color: #0c0c0c;
-    --text-color: #f1f1f1;
-    --accent-color: #c5ff41;
-    /* Cyber Lime */
-    --secondary-color: #8a8a8a;
+    /* Color System */
+    --bg-color: #0a0a09;
+    --text-color: #efece3;
+    --accent-color: #8fd14f;
+    --secondary-color: #9c9a94;
 
     /* Typography */
-    --font-main: "Plus Jakarta Sans", sans-serif;
-    --font-heading: "Outfit", sans-serif;
+    --font-main: var(--font-sans);
+    --font-heading: var(--font-serif);
 
     /* Transitions */
     --ease-expo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -62,6 +66,11 @@ body {
     transition: background-color 0.8s var(--ease-expo);
 }
 
+::selection {
+    background-color: var(--accent-color);
+    color: #0a0a09;
+}
+
 /* Lenis Smooth Scroll */
 html.lenis {
     height: auto;
@@ -90,10 +99,9 @@ h3,
 h4,
 h5 {
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 a {
@@ -124,26 +132,6 @@ ul {
 }
 
 /* Typography Helpers */
-.text-h1 {
-    font-size: clamp(2.5rem, 15vw, 12rem);
-    line-height: 0.85;
-    letter-spacing: -0.04em;
-}
-
-.text-h2 {
-    font-size: clamp(2rem, 10vw, 8rem);
-    line-height: 0.9;
-}
-
-.text-h3 {
-    font-size: clamp(1.5rem, 6vw, 5rem);
-}
-
-.text-body {
-    font-size: clamp(1rem, 1.1vw, 1.25rem);
-    line-height: 1.6;
-}
-
 .text-secondary {
     color: var(--secondary-color);
     font-size: clamp(0.7rem, 0.8vw, 0.9rem);
@@ -160,27 +148,6 @@ ul {
 .line-wrap {
     overflow: hidden;
     display: block;
-}
-
-/* Custom Cursor (Optional) */
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    display: none;
-}
-
-@media (pointer: fine) {
-    .custom-cursor {
-        display: block;
-    }
 }
 
 /* Utility for GSAP */

@@ -1,47 +1,133 @@
-import Hero from "@/components/Hero";
-import Narrative from "@/components/Narrative";
-import ProjectSelection from "@/components/ProjectSelection";
-import Expertise from "@/components/Expertise";
+import { projects } from "@/context/projects";
+import Navigation from "@/components/Navigation";
+import ProjectRow from "@/components/ProjectRow";
+
+const IconSkeep = () => (
+    <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        className="inline-block align-middle"
+    >
+        <path
+            d="M12 2L21 7V17L12 22L3 17V7L12 2Z"
+            stroke="#8FD14F"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M12 12L21 7M12 12V22M12 12L3 7"
+            stroke="#8FD14F"
+            strokeWidth="1.6"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+const IconGetDropa = () => (
+    <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        className="inline-block align-middle"
+    >
+        <path d="M5 12a7 7 0 0 1 7-7" stroke="#E9E5DA" strokeWidth="1.6" strokeLinecap="round" />
+        <path
+            d="M3 12a9 9 0 0 1 9-9"
+            stroke="#E9E5DA"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            opacity="0.6"
+        />
+        <circle cx="12" cy="12" r="2.5" fill="#E9E5DA" />
+    </svg>
+);
+
+const FooterLink = ({
+    href,
+    children,
+}: {
+    href: string;
+    children: React.ReactNode;
+}) => (
+    <a
+        href={href}
+        className="text-[15px] text-[#B8B5AC] underline decoration-[#4a4a46] underline-offset-4 transition-colors hover:text-[#EFECE3]"
+    >
+        {children}
+    </a>
+);
 
 export default function Home() {
     return (
-        <div className="relative">
-            <Hero />
-            <Narrative />
-            <ProjectSelection />
-            <Expertise />
+        <div className="min-h-screen bg-[#0A0A09] font-sans antialiased">
+            <div className="max-w-3xl mx-auto px-6 pt-10 pb-24">
+                <Navigation />
 
-            {/* Final Friendly Call to Action */}
-            <section data-theme="dark" className="section contact-section flex flex-col items-center justify-center relative overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] aspect-square bg-accent opacity-[0.03] rounded-full blur-[200px]" />
+                {/* Hero */}
+                <header className="mb-16">
+                    <h1 className="font-serif text-[64px] leading-none text-[#F2EFE6] mb-6">
+                        Ifeanyi
+                    </h1>
 
-                <div className="container p-0 flex flex-col items-center z-10">
-                    <div className="max-w-5xl text-center">
-                        <h2 className="text-[12vw] md:text-[8vw] xl:text-[6vw] font-black mb-10 leading-[0.9] tracking-tighter uppercase px-4">
-                            Got a project <br className="hidden sm:block" /> in mind?
-                        </h2>
-                        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-center pt-10 border-t border-white/10 mt-8">
-                            <div className="text-center md:text-right flex flex-col text-[10px] uppercase tracking-[0.3em] text-secondary gap-2 opacity-60">
-                                <span>I'm currently free</span>
-                                <span>Let's talk soon!</span>
-                            </div>
-                            <a href="mailto:ifeanyilucky360@gmail.com" className="text-2xl md:text-3xl lg:text-5xl font-black underline decoration-1 underline-offset-8 hover:text-accent transition-all duration-700 ease-expo break-all">
-                                ifeanyilucky360@gmail.com
+                    <div className="text-[13px] tracking-[0.2em] uppercase text-[#6B6A66] mb-5">
+                        Software Engineer
+                    </div>
+
+                    <p className="text-[17px] text-[#B8B5AC] mb-10">
+                        Creator of{" "}
+                        <span className="inline-flex items-center gap-1.5">
+                            <IconSkeep />
+                            <a
+                                href="https://useskeep.com"
+                                className="text-[#EFECE3] underline decoration-[#4a4a46] underline-offset-4 transition-colors hover:decoration-[#8FD14F]"
+                            >
+                                Skeep
                             </a>
-                        </div>
-                    </div>
-                </div>
+                        </span>{" "}
+                        and{" "}
+                        <span className="inline-flex items-center gap-1.5">
+                            <IconGetDropa />
+                            <a
+                                href="https://getdropa.com"
+                                className="text-[#EFECE3] underline decoration-[#4a4a46] underline-offset-4 transition-colors hover:text-white"
+                            >
+                                GetDropa
+                            </a>
+                        </span>
+                        .
+                    </p>
 
-                <footer className="mt-32 w-full flex flex-col lg:flex-row justify-between items-center text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-secondary opacity-40 py-6 border-t border-white/5">
-                    <div className="flex gap-8 md:gap-12 mb-6 lg:mb-0">
-                        <a href="https://www.linkedin.com/in/ifeanyi-lucky-193b44194/" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold transition-colors">LinkedIn</a>
-                        <a href="https://github.com/ifeanyilucky" target="_blank" rel="noopener noreferrer" className="hover:text-accent font-bold transition-colors">Github</a>
+                    <div className="flex items-center gap-3 mb-12">
+                        <FooterLink href="https://github.com/ifeanyilucky">GitHub</FooterLink>
+                        <span className="text-[#4a4a46] text-[13px]">·</span>
+                        <FooterLink href="mailto:ifeanyilucky360@gmail.com">Email</FooterLink>
+                        <span className="text-[#4a4a46] text-[13px]">·</span>
+                        <FooterLink href="https://www.linkedin.com/in/ifeanyi-lucky-193b44194/">
+                            LinkedIn
+                        </FooterLink>
                     </div>
-                    <div className="text-center lg:text-right">
-                        Created by Ifeanyi ©2026
+
+                    {/* Now playing box */}
+                    <div className="rounded-xl border border-[#242422] bg-[#131311] px-6 py-5">
+                        <span className="text-[15px] text-[#8B8A85]">
+                            Not listening to anything right now.
+                        </span>
                     </div>
-                </footer>
-            </section>
+                </header>
+
+                {/* Projects */}
+                <section>
+                    <h2 className="font-serif text-[34px] text-[#F2EFE6] mb-2">Projects</h2>
+                    <div className="border-t border-[#242422]">
+                        {projects.map((project) => (
+                            <ProjectRow key={project.id} project={project} />
+                        ))}
+                    </div>
+                </section>
+            </div>
         </div>
     );
 }

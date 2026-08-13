@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/motion/SmoothScroll";
-import Preloader from "@/components/motion/Preloader";
-import BackgroundManager from "@/components/motion/BackgroundManager";
-import CustomCursor from "@/components/motion/CustomCursor";
 import PageTransition from "@/components/motion/PageTransition";
-import { LoaderProvider } from "@/context/LoaderContext";
-import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
-    title: "Ifeanyi Lucky | Backend & Full-Stack Software Engineer",
-    description: "Software engineer with 5+ years building scalable backend and full-stack systems across logistics, fintech, Web3, and marketplace platforms — Node.js, TypeScript, React, and cloud infrastructure.",
+    title: "Ifeanyi | Software Engineer",
+    description:
+        "Backend and full-stack software engineer building scalable systems across logistics, fintech, Web3, and marketplace platforms — Node.js, TypeScript, React, and cloud infrastructure.",
     openGraph: {
-        title: "Ifeanyi Lucky | Backend & Full-Stack Software Engineer",
-        description: "5+ years building scalable backend and full-stack systems across logistics, fintech, Web3, and marketplace platforms.",
+        title: "Ifeanyi | Software Engineer",
+        description:
+            "Software engineer building backend and full-stack systems across logistics, fintech, Web3, and marketplace platforms.",
         type: "website",
     },
 };
@@ -25,18 +22,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="antialiased selection:bg-accent selection:text-black">
-                <LoaderProvider>
-                    <CustomCursor />
-                    <Navigation />
-                    <Preloader />
-                    <BackgroundManager />
-                    <SmoothScroll>
-                        <PageTransition>
-                            <main>{children}</main>
-                        </PageTransition>
-                    </SmoothScroll>
-                </LoaderProvider>
+            <body className="antialiased">
+                <SmoothScroll>
+                    <PageTransition>
+                        <main>{children}</main>
+                    </PageTransition>
+                </SmoothScroll>
             </body>
         </html>
     );
